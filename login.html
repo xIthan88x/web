@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - Aprender PHP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Iniciar Sesión</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button">Inicio</a></li>
+                <li><a href="registrar.html" class="button">Registrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Acceder a tu Cuenta</h2>
+            <form action="procesar_login.php" method="post">
+                <p>
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" name="correo" id="correo" required>
+                </p>
+                <p>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" name="contrasena" id="contrasena" required>
+                </p>
+                <p>
+                    <input type="submit" value="Iniciar Sesión">
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
