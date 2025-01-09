@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listas - Aprender HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Listas en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="html.html" class="button">Regresar a HTML</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Listas Enumeradas</h2>
+            <p>La marca <strong>&lt;OL&gt;</strong> .. <strong>&lt;/OL&gt;</strong> se utiliza para crear listas con numeración, los elementos de lista se adicionan con la marca <strong>&lt;LI&gt;</strong>.</p>
+            <section class="ejemplo">
+                <h3 class="color-2">Ejemplo</h3>
+                <div class="codigo">
+                    <pre><code id="codigo1">&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO5&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;El proceso de matricula consta de los siguientes pasos:
+&lt;OL&gt;
+&lt;LI&gt;Preinscripción
+&lt;LI&gt;Llenar el formulario de inscripción
+&lt;LI&gt;Inscripción
+&lt;LI&gt;Entrevista
+&lt;LI&gt;Matricula
+&lt;/OL&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                    <button class="button" onclick="copiarCodigo('codigo1')">Copiar Código</button>
+                </div>
+                <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ven las listas enumeradas.</p>
+                <img src="imagenes\resultado_listas_enumeradas.jpg" alt="Resultado de Listas Enumeradas en HTML" class="imagen-resultado">
+            </section>
+        </section>
+
+        <section>
+            <h2 class="color-3">Listas No Enumeradas</h2>
+            <p>La marca <strong>&lt;UL&gt;</strong> .. <strong>&lt;/UL&gt;</strong> se utiliza para crear listas sin numeración, los elementos de lista se adicionan con la marca <strong>&lt;LI&gt;</strong>.</p>
+            <section class="ejemplo">
+                <h3 class="color-2">Ejemplo</h3>
+                <div class="codigo">
+                    <pre><code id="codigo2">&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO6&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;La universidad antonio nariño ofrece los siguientes programas:
+&lt;UL&gt;
+&lt;LI&gt;Ingeniería de sistemas
+&lt;LI&gt;Psicología
+&lt;LI&gt;Contaduría pública
+&lt;LI&gt;Ingeniería electrónica
+&lt;LI&gt;Tecnología en sistematización de datos
+&lt;/UL&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                    <button class="button" onclick="copiarCodigo('codigo2')">Copiar Código</button>
+                </div>
+                <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ven las listas no enumeradas.</p>
+                <img src="imagenes\resultado_listas_no_enumeradas.jpg" alt="Resultado de Listas No Enumeradas en HTML" class="imagen-resultado">
+            </section>
+        </section>
+
+        <section>
+            <h2 class="color-3">Listas de Glosario</h2>
+            <p>La marca <strong>&lt;DL&gt;</strong> .. <strong>&lt;/DL&gt;</strong> se utiliza para crear listas de glosario, cada término se escribe después de la marca <strong>&lt;DT&gt;</strong>, y la definición seguido de la marca <strong>&lt;DD&gt;</strong>.</p>
+            <section class="ejemplo">
+                <h3 class="color-2">Ejemplo</h3>
+                <div class="codigo">
+                    <pre><code id="codigo3">&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO7&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;Terminología de internet:
+&lt;DL&gt;
+&lt;DD&gt;Red &lt;DT&gt;Conjunto de computadoras interconectadas entre sí con el fin de compartir recursos e información.
+&lt;DD&gt;Browser &lt;DT&gt;Aplicación que se utiliza para visualizar páginas web, también se conoce con el nombre de navegador, los más utilizados son el Internet Explorer y el Netscape.
+&lt;DD&gt;HTML &lt;DT&gt;Lenguaje de marcas de hypertexto.
+&lt;/DL&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                    <button class="button" onclick="copiarCodigo('codigo3')">Copiar Código</button>
+                </div>
+                <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ven las listas de glosario.</p>
+                <img src="imagenes\resultado_listas_glosario.jpg" alt="Resultado de Listas de Glosario en HTML" class="imagen-resultado">
+            </section>
+        </section>
+    </main>
+    <script>
+        function copiarCodigo(idCodigo) {
+            // Obtén el código correspondiente a través de su ID
+            const codigo = document.getElementById(idCodigo).textContent;
+
+            // Crea un campo de texto temporal
+            const textarea = document.createElement('textarea');
+            textarea.value = codigo;
+
+            // Agrega el campo de texto al DOM
+            document.body.appendChild(textarea);
+
+            // Selecciona el texto del campo
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+            // Copia el texto seleccionado al portapapeles
+            document.execCommand('copy');
+
+            // Elimina el campo de texto temporal
+            document.body.removeChild(textarea);
+
+            // Opcional: Alerta o mensaje que indica que el código fue copiado
+            alert("Código copiado al portapapeles!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML - Aprender HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo para centrar el contenido dentro de la sección */
+        .informacion-principal {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .informacion-principal pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+            overflow-x: auto;
+        }
+
+        .informacion-principal ol {
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        /* Nueva modificación para las imágenes */
+        .imagen-mediana {
+            width: 100%; /* Ajuste para que se adapten al tamaño de la pantalla */
+            max-width: 150px; /* Límite máximo de tamaño */
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px;
+            border: 2px solid #af7ac5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Aprender HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button">Regresar al Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Nueva sección principal agregada primero -->
+        <section class="informacion-principal">
+            <h2>Lo Principal: ¡Abre tu Blog de Notas!</h2>
+            <p>Para empezar a crear una página web, lo primero que necesitamos es un editor de texto, como el "Blog de Notas" de Windows, donde escribirás tu código HTML.</p>
+            <p>En HTML, cada documento se puede dividir en dos partes principales:</p>
+            <ol>
+                <li><strong>El Cuerpo:</strong> Esta es la parte visible de tu documento, es decir, lo que será mostrado por el navegador.</li>
+                <li><strong>El Encabezado:</strong> Aquí se incluye información sobre el documento, pero no se muestra en la página. Por ejemplo, el título o metadatos.</li>
+            </ol>
+            <p>Un documento HTML básico tiene esta estructura:</p>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+    &lt;head&gt;
+        <!-- Elementos válidos en el documento HEAD -->
+    &lt;/head&gt;
+    &lt;body&gt;
+        <!-- Elementos válidos en el documento BODY -->
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <p>El elemento <code>&lt;html&gt;</code> es el más exterior y declara que el texto encerrado es un documento HTML. Dentro de este, encontrarás el <code>&lt;head&gt;</code> y el <code>&lt;body&gt;</code>.</p>
+            <p>Recuerda, el <code>&lt;body&gt;</code> contiene el contenido visible de la página (como textos, imágenes y enlaces), mientras que el <code>&lt;head&gt;</code> contiene la información relacionada con el documento, como el título de la página y otros datos.</p>
+        </section>
+
+        <!-- Ahora la sección de la pregunta -->
+        <section class="bienvenida">
+            <h2>¿Qué quieres aprender hoy?</h2>
+            <p>Selecciona una de las opciones a continuación para comenzar tu viaje en el mundo de HTML.</p>
+        </section>
+        
+        <!-- Sección de botones con las opciones -->
+        <section class="opciones-aprendizaje">
+            <div class="fila">
+                <div class="opcion">
+                    <img src="imagenes\encabezados.jpg" alt="Encabezados" class="imagen-mediana">
+                    <a href="encabezados.html" class="button">Encabezados</a>
+                </div>
+                <div class="opcion">
+                    <img src="imagenes\parrafos.jpg" alt="Párrafos" class="imagen-mediana">
+                    <a href="parrafos.html" class="button">Párrafos</a>
+                </div>
+                <div class="opcion">
+                    <img src="imagenes\formateo_texto.jpg" alt="Formateo de texto" class="imagen-mediana">
+                    <a href="formateo_texto.html" class="button">Formateo de texto</a>
+                </div>
+                <div class="opcion">
+                    <img src="imagenes\fuentes.jpg" alt="Fuentes" class="imagen-mediana">
+                    <a href="fuentes.html" class="button">Fuentes</a>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="opcion">
+                    <img src="imagenes\listas.jpg" alt="Listas" class="imagen-mediana">
+                    <a href="listas.html" class="button">Listas</a>
+                </div>
+                <div class="opcion">
+                    <img src="imagenes\graficas.jpg" alt="Manejo de gráficas" class="imagen-mediana">
+                    <a href="graficas.html" class="button">Manejo de gráficas</a>
+                </div>
+                <div class="opcion">
+                    <img src="imagenes\enlaces.jpg" alt="Tipos de enlaces" class="imagen-mediana">
+                    <a href="enlaces.html" class="button">Tipos de enlaces</a>
+                </div>
+                <div class="opcion">
+                    <img src="imagenes\formularios.jpg" alt="Formularios" class="imagen-mediana">
+                    <a href="formularios.html" class="button">Formularios</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

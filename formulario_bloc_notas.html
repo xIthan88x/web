@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Bloc de Notas - Aprender PHP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Cómo crear un formulario y guardar la información en un Bloc de Notas</h1>
+        <nav>
+            <ul>
+                <li><a href="php.html" class="button">Regresar a PHP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Formulario y Guardado en Bloc de Notas</h2>
+            <p>Crear un formulario en PHP y guardar la información en un archivo de texto (Bloc de Notas) es una forma sencilla de almacenar datos. Aquí te mostramos cómo hacerlo paso a paso.</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo de Código HTML</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Formulario Bloc de Notas&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Formulario Bloc de Notas&lt;/h1&gt;
+    &lt;form action="guardar_formulario.php" method="post"&gt;
+        &lt;p&gt;
+            &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+            &lt;input type="text" name="nombre" id="nombre"&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+            &lt;input type="email" name="email" id="email"&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="submit" value="Enviar"&gt;
+        &lt;/p&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigoHTML()">Copiar Código HTML</button>
+            </div>
+            <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ve el formulario.</p>
+        </section>
+        <section>
+            <h3 class="color-2">Código para guardar_formulario.php</h3>
+            <div class="codigo">
+                <pre><code>&lt;?php
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+
+// Guardar la información en un archivo de texto
+$archivo = fopen("datos.txt", "a");
+fwrite($archivo, "Nombre: " . $nombre . "\n");
+fwrite($archivo, "Correo Electrónico: " . $email . "\n");
+fwrite($archivo, "------------------------\n");
+fclose($archivo);
+
+echo "Información guardada correctamente.";
+?&gt;</code></pre>
+                <button class="button" onclick="copiarCodigoPHP()">Copiar Código PHP</button>
+            </div>
+            <p class="mensaje">Este archivo PHP guarda los datos enviados desde el formulario en un archivo de texto llamado <strong>datos.txt</strong>.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_formulario_bloc_notas_1.jpg" alt="Resultado del Formulario Bloc de Notas 1" class="imagen-resultado">
+            <img src="imagenes\resultado_formulario_bloc_notas_2.jpg" alt="Resultado del Formulario Bloc de Notas 2" class="imagen-resultado">
+            <img src="imagenes\resultado_formulario_bloc_notas_3.jpg" alt="Resultado del Formulario Bloc de Notas 3" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigoHTML() {
+            const codigoHTML = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Bloc de Notas</title>
+</head>
+<body>
+    <h1>Formulario Bloc de Notas</h1>
+    <form action="guardar_formulario.php" method="post">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+        </p>
+        <p>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" name="email" id="email">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>`;
+            navigator.clipboard.writeText(codigoHTML).then(() => {
+                alert('Código HTML copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código HTML');
+            });
+        }
+
+        function copiarCodigoPHP() {
+            const codigoPHP = `<?php
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+
+// Guardar la información en un archivo de texto
+$archivo = fopen("datos.txt", "a");
+fwrite($archivo, "Nombre: " . $nombre . "\\n");
+fwrite($archivo, "Correo Electrónico: " . $email . "\\n");
+fwrite($archivo, "------------------------\\n");
+fclose($archivo);
+
+echo "Informacion guardada correctamente.";
+?>`;
+            navigator.clipboard.writeText(codigoPHP).then(() => {
+                alert('Código PHP copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código PHP');
+            });
+        }
+    </script>
+</body>
+</html>

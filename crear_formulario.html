@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Formulario - Aprender PHP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Cómo crear un formulario en PHP</h1>
+        <nav>
+            <ul>
+                <li><a href="php.html" class="button">Regresar a PHP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Crear un Formulario en PHP</h2>
+            <p>Crear un formulario en PHP permite recoger datos del usuario y procesarlos en el servidor. Aquí te mostramos cómo hacerlo paso a paso.</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo de Código</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Formulario de Ejemplo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Formulario de Ejemplo&lt;/h1&gt;
+    &lt;form action="procesar_formulario.php" method="post"&gt;
+        &lt;p&gt;
+            &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+            &lt;input type="text" name="nombre" id="nombre"&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+            &lt;input type="email" name="email" id="email"&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="submit" value="Enviar"&gt;
+        &lt;/p&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigo()">Copiar Código</button>
+            </div>
+            <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ve el formulario.</p>
+        </section>
+        <section>
+            <h3 class="color-2">Código para procesar_formulario.php</h3>
+            <div class="codigo">
+                <pre><code>&lt;?php
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+
+echo "Nombre: " . htmlspecialchars($nombre) . "&lt;br&gt;";
+echo "Correo Electronico: " . htmlspecialchars($email);
+?&gt;</code></pre>
+                <button class="button" onclick="copiarCodigoPHP()">Copiar Código PHP</button>
+            </div>
+            <p class="mensaje">Este archivo PHP procesa los datos enviados desde el formulario y muestra los valores recibidos.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_formulario.jpg" alt="Resultado del Formulario en PHP" class="imagen-resultado">
+            <img src="imagenes\resultado_formulario2.jpg" alt="Resultado Alternativo del Formulario en PHP" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigo() {
+            const codigo = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Ejemplo</title>
+</head>
+<body>
+    <h1>Formulario de Ejemplo</h1>
+    <form action="procesar_formulario.php" method="post">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+        </p>
+        <p>
+            <label for="email">Correo Electronico:</label>
+            <input type="email" name="email" id="email">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>`;
+            navigator.clipboard.writeText(codigo).then(() => {
+                alert('Código copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código');
+            });
+        }
+
+        function copiarCodigoPHP() {
+            const codigoPHP = `<?php
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+
+echo "Nombre: " . htmlspecialchars($nombre) . "<br>";
+echo "Correo Electrónico: " . htmlspecialchars($email);
+?>`;
+            navigator.clipboard.writeText(codigoPHP).then(() => {
+                alert('Código PHP copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código PHP');
+            });
+        }
+    </script>
+</body>
+</html>

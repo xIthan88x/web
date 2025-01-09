@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Información - Aprender PHP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Cómo consultar y modificar información en la base de datos</h1>
+        <nav>
+            <ul>
+                <li><a href="php.html" class="button">Regresar a PHP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Consultar y Modificar Información en la Base de Datos</h2>
+            <p>En este tutorial, aprenderás cómo crear un formulario en HTML para consultar información en la base de datos MySQL y cómo modificar esa información utilizando PHP. La contraseña de la base de datos es "usbw".</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo de Código HTML</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Problema&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action="pagina2.php" method="post"&gt;
+        Ingrese el mail del alumno:
+        &lt;input type="text" name="mail"&gt;&lt;br&gt;
+        &lt;input type="submit" value="Buscar"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigoHTML()">Copiar Código HTML</button>
+            </div>
+            <p class="mensaje">Este código HTML crea un formulario para ingresar el correo del alumno y enviarlo al archivo <strong>pagina2.php</strong> para buscar su información.</p>
+        </section>
+        <section>
+            <h3 class="color-2">Código para pagina2.php</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Problema&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+$conexion = mysqli_connect("localhost", "root", "usbw", "base1") or die("Problemas con la conexión");
+$registros = mysqli_query($conexion, "select * from alumnos where mail='$_REQUEST[mail]'") or die("Problemas en el select:" . mysqli_error($conexion));
+if ($reg = mysqli_fetch_array($registros)) {
+?&gt;
+    &lt;form action="pagina3.php" method="post"&gt;
+        Ingrese nuevo mail:
+        &lt;input type="text" name="mailnuevo" value="&lt;?php echo $reg['mail'] ?&gt;"&gt;&lt;br&gt;
+        &lt;input type="hidden" name="mailviejo" value="&lt;?php echo $reg['mail'] ?&gt;"&gt;
+        &lt;input type="submit" value="Modificar"&gt;
+    &lt;/form&gt;
+&lt;?php
+} else {
+    echo "No existe alumno con dicho mail";
+}
+mysqli_close($conexion);
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigoPHP()">Copiar Código PHP</button>
+            </div>
+            <p class="mensaje">Este código PHP realiza la conexión con la base de datos, busca el alumno por su correo y permite modificar su correo si se encuentra.</p>
+        </section>
+        <section>
+            <h3 class="color-2">Código para pagina3.php</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Problema&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+$conexion = mysqli_connect("localhost", "root", "usbw", "base1") or die("Problemas con la conexión");
+mysqli_query($conexion, "update alumnos set mail='$_REQUEST[mailnuevo]' where mail='$_REQUEST[mailviejo]'") or die("Problemas en el select:" . mysqli_error($conexion));
+echo "El mail fue modificado con éxito";
+mysqli_close($conexion);
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigoPHP3()">Copiar Código PHP</button>
+            </div>
+            <p class="mensaje">Este código PHP realiza la modificación del correo del alumno en la base de datos.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_consultar_1.jpg" alt="Resultado de Consulta 1" class="imagen-resultado">
+            <img src="imagenes\resultado_consultar_2.jpg" alt="Resultado de Consulta 2" class="imagen-resultado">
+            <img src="imagenes\resultado_consultar_3.jpg" alt="Resultado de Consulta 3" class="imagen-resultado">
+	    <img src="imagenes\resultado_consultar_4.jpg" alt="Resultado de Consulta 3" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigoHTML() {
+            const codigoHTML = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema</title>
+</head>
+<body>
+    <form action="pagina2.php" method="post">
+        Ingrese el mail del alumno:
+        <input type="text" name="mail"><br>
+        <input type="submit" value="Buscar">
+    </form>
+</body>
+</html>`;
+            navigator.clipboard.writeText(codigoHTML).then(() => {
+                alert('Código HTML copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código HTML');
+            });
+        }
+
+        function copiarCodigoPHP() {
+            const codigoPHP = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema</title>
+</head>
+<body>
+<?php
+$conexion = mysqli_connect("localhost", "root", "usbw", "base1") or die("Problemas con la conexión");
+$registros = mysqli_query($conexion, "select * from alumnos where mail='$_REQUEST[mail]'") or die("Problemas en el select:" . mysqli_error($conexion));
+if ($reg = mysqli_fetch_array($registros)) {
+?>
+    <form action="pagina3.php" method="post">
+        Ingrese nuevo mail:
+        <input type="text" name="mailnuevo" value="<?php echo $reg['mail'] ?>"><br>
+        <input type="hidden" name="mailviejo" value="<?php echo $reg['mail'] ?>">
+        <input type="submit" value="Modificar">
+    </form>
+<?php
+} else {
+    echo "No existe alumno con dicho mail";
+}
+mysqli_close($conexion);
+?>
+</body>
+</html>`;
+            navigator.clipboard.writeText(codigoPHP).then(() => {
+                alert('Código PHP copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código PHP');
+            });
+        }
+
+        function copiarCodigoPHP3() {
+            const codigoPHP3 = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema</title>
+</head>
+<body>
+<?php
+$conexion = mysqli_connect("localhost", "root", "usbw", "base1") or die("Problemas con la conexión");
+mysqli_query($conexion, "update alumnos set mail='$_REQUEST[mailnuevo]' where mail='$_REQUEST[mailviejo]'") or die("Problemas en el select:" . mysqli_error($conexion));
+echo "El mail fue modificado con éxito";
+mysqli_close($conexion);
+?>
+</body>
+</html>`;
+            navigator.clipboard.writeText(codigoPHP3).then(() => {
+                alert('Código PHP copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código PHP');
+            });
+        }
+    </script>
+</body>
+</html>

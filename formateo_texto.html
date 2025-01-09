@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formateo de Texto - Aprender HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Formateo de Texto en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="html.html" class="button">Regresar a HTML</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Formateo de Texto en HTML</h2>
+            <p>En la siguiente tabla se describen las principales marcas para formatear texto:</p>
+            <div class="tabla-centrada">
+                <table>
+                    <tr>
+                        <th>FORMATO</th>
+                        <th>MARCA</th>
+                    </tr>
+                    <tr>
+                        <td>NEGRILLA</td>
+                        <td>&lt;B&gt; .. &lt;/B&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>ITALICA</td>
+                        <td>&lt;I&gt; .. &lt;/I&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>SUBRAYADO</td>
+                        <td>&lt;U&gt; .. &lt;/U&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>ENFATIZADO</td>
+                        <td>&lt;STRONG&gt; .. &lt;/STRONG&gt;</td>
+                    </tr>
+                </table>
+            </div>
+            <p>Dentro de la apertura de la marca <strong>&lt;MARCA&gt;</strong> y su cierre <strong>&lt;/MARCA&gt;</strong> debe escribirse el texto al que se le quiere dar formato.</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo</h3>
+            <div class="codigo">
+                <pre><code>&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO3&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+
+&lt;H3&gt;MARCA PARA NEGRILLA&lt;/H3&gt;
+&lt;P&gt;&lt;B&gt;texto en negrilla&lt;/B&gt;&lt;/P&gt;
+
+&lt;H3&gt;MARCA PARA ITALICA&lt;/H3&gt;
+&lt;P&gt;&lt;I&gt;texto en itálica&lt;/I&gt;&lt;/P&gt;
+
+&lt;H3&gt;MARCA PARA SUBRAYADO&lt;/H3&gt;
+&lt;P&gt;&lt;U&gt;texto subrayado&lt;/U&gt;&lt;/P&gt;
+
+&lt;H3&gt;MARCA PARA ENFATIZADO&lt;/H3&gt;
+&lt;P&gt;&lt;STRONG&gt;texto enfatizado&lt;/STRONG&gt;&lt;/P&gt;
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                <button class="button" onclick="copiarCodigo()">Copiar Código</button>
+            </div>
+            <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ven los diferentes formatos de texto.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_formateo_texto.jpg" alt="Resultado de Formateo de Texto en HTML" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigo() {
+            const codigo = `<!DOCTYPE html>
+<HTML>
+<HEAD><TITLE>EJEMPLO3</TITLE></HEAD>
+<BODY>
+
+<H3>MARCA PARA NEGRILLA</H3>
+<P><B>texto en negrilla</B></P>
+
+<H3>MARCA PARA ITALICA</H3>
+<P><I>texto en itálica</I></P>
+
+<H3>MARCA PARA SUBRAYADO</H3>
+<P><U>texto subrayado</U></P>
+
+<H3>MARCA PARA ENFATIZADO</H3>
+<P><STRONG>texto enfatizado</STRONG></P>
+
+</BODY>
+</HTML>`;
+            navigator.clipboard.writeText(codigo).then(() => {
+                alert('Código copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código');
+            });
+        }
+    </script>
+</body>
+</html>

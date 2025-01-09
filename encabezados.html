@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encabezados - Aprender HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Encabezados en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="html.html" class="button">Regresar a HTML</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Encabezados en HTML</h2>
+            <p>La marca <strong>HN</strong> se utiliza para crear encabezados, es decir, títulos y subtítulos. <strong>N</strong> puede tomar valores de 1 a 6 (<code>&lt;H1&gt;</code> hasta <code>&lt;H6&gt;</code>), siendo <code>&lt;H1&gt;</code> el mayor nivel y <code>&lt;H6&gt;</code> el menor. No es recomendable utilizar esta marca para cambiar el tamaño de la letra.</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo</h3>
+            <div class="codigo">
+                <pre><code>&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO1&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;H1&gt;MARCA PARA TITULOS H1&lt;/H1&gt;
+&lt;H2&gt;MARCA PARA TITULOS H2&lt;/H2&gt;
+&lt;H3&gt;MARCA PARA TITULOS H3&lt;/H3&gt;
+&lt;H4&gt;MARCA PARA TITULOS H4&lt;/H4&gt;
+&lt;H5&gt;MARCA PARA TITULOS H5&lt;/H5&gt;
+&lt;H6&gt;MARCA PARA TITULOS H6&lt;/H6&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                <button class="button" onclick="copiarCodigo()">Copiar Código</button>
+            </div>
+            <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ven los diferentes niveles de encabezados.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_encabezados.jpg" alt="Resultado de Encabezados en HTML" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigo() {
+            const codigo = `<!DOCTYPE html>
+<HTML>
+<HEAD><TITLE>EJEMPLO1</TITLE></HEAD>
+<BODY>
+<H1>MARCA PARA TITULOS H1</H1>
+<H2>MARCA PARA TITULOS H2</H2>
+<H3>MARCA PARA TITULOS H3</H3>
+<H4>MARCA PARA TITULOS H4</H4>
+<H5>MARCA PARA TITULOS H5</H5>
+<H6>MARCA PARA TITULOS H6</H6>
+</BODY>
+</HTML>`;
+            navigator.clipboard.writeText(codigo).then(() => {
+                alert('Código copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código');
+            });
+        }
+    </script>
+</body>
+</html>

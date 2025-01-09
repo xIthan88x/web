@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Registro - Aprender PHP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Cómo crear un registro en la base de datos</h1>
+        <nav>
+            <ul>
+                <li><a href="php.html" class="button">Regresar a PHP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Insertar un Registro en la Base de Datos</h2>
+            <p>En este tutorial, aprenderás cómo crear un formulario en HTML para ingresar datos y cómo guardar esa información en una base de datos MySQL utilizando PHP.</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo de Código HTML</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Alta de Alumnos&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Alta de Alumnos&lt;/h1&gt;
+    &lt;form action="pagina2.php" method="post"&gt;
+        Ingrese nombre: 
+        &lt;input type="text" name="nombre"&gt;&lt;br&gt;
+        Ingrese mail: 
+        &lt;input type="text" name="mail"&gt;&lt;br&gt;
+        Seleccione el curso: 
+        &lt;select name="codigocurso"&gt; 
+            &lt;option value="1"&gt;PHP&lt;/option&gt; 
+            &lt;option value="2"&gt;ASP&lt;/option&gt; 
+            &lt;option value="3"&gt;JSP&lt;/option&gt; 
+        &lt;/select&gt; 
+        &lt;br&gt; 
+        &lt;input type="submit" value="Registrar"&gt; 
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigoHTML()">Copiar Código HTML</button>
+            </div>
+            <p class="mensaje">Este código realiza un formulario y el método <code>action="pagina2.php"</code> sirve para enviar la información a la base de datos.</p>
+        </section>
+        <section>
+            <h3 class="color-2">Código para pagina2.php</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Problema&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php 
+$conexion = mysqli_connect("localhost", "root", "", "base1") or die("Problemas con la conexión"); 
+mysqli_query($conexion, "insert into alumnos(nombre,mail,codigocurso) values ('$_REQUEST[nombre]','$_REQUEST[mail]',$_REQUEST[codigocurso])") or die("Problemas en el select" . mysqli_error($conexion)); 
+mysqli_close($conexion); 
+echo "El alumno fue dado de alta."; 
+?&gt; 
+&lt;/body&gt; 
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigoPHP()">Copiar Código PHP</button>
+            </div>
+            <p class="mensaje">Este código PHP realiza la conexión con la base de datos y guarda la información enviada desde el formulario.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_registro_1.jpg" alt="Resultado del Registro 1" class="imagen-resultado">
+            <img src="imagenes\resultado_registro_2.jpg" alt="Resultado del Registro 2" class="imagen-resultado">
+            <img src="imagenes\resultado_registro_3.jpg" alt="Resultado del Registro 3" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigoHTML() {
+            const codigoHTML = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de Alumnos</title>
+</head>
+<body>
+    <h1>Alta de Alumnos</h1>
+    <form action="pagina2.php" method="post">
+        Ingrese nombre: 
+        <input type="text" name="nombre"><br>
+        Ingrese mail: 
+        <input type="text" name="mail"><br>
+        Seleccione el curso: 
+        <select name="codigocurso"> 
+            <option value="1">PHP</option> 
+            <option value="2">ASP</option> 
+            <option value="3">JSP</option> 
+        </select> 
+        <br> 
+        <input type="submit" value="Registrar"> 
+    </form>
+</body>
+</html>`;
+            navigator.clipboard.writeText(codigoHTML).then(() => {
+                alert('Código HTML copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código HTML');
+            });
+        }
+
+        function copiarCodigoPHP() {
+            const codigoPHP = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema</title>
+</head>
+<body>
+<?php 
+$conexion = mysqli_connect("localhost", "root", "", "base1") or die("Problemas con la conexión"); 
+mysqli_query($conexion, "insert into alumnos(nombre,mail,codigocurso) values ('$_REQUEST[nombre]','$_REQUEST[mail]',$_REQUEST[codigocurso])") or die("Problemas en el select" . mysqli_error($conexion)); 
+mysqli_close($conexion); 
+echo "El alumno fue dado de alta."; 
+?> 
+</body> 
+</html>`;
+            navigator.clipboard.writeText(codigoPHP).then(() => {
+                alert('Código PHP copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código PHP');
+            });
+        }
+    </script>
+</body>
+</html>

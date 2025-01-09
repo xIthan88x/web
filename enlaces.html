@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Enlaces - Aprender HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Enlaces en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="html.html" class="button">Regresar a HTML</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Tipos de Enlaces</h2>
+            <p>Existen tres tipos de enlaces principalmente:</p>
+            <ol>
+                <li>A otro sitio web.</li>
+                <li>A otra página web dentro del mismo sitio.</li>
+                <li>A otro punto dentro de la misma página.</li>
+            </ol>
+            <p>La marca <strong>&lt;A&gt;</strong> .. <strong>&lt;/A&gt;</strong> nos permite realizar cualquiera de los tipos de enlace mencionados.</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo</h3>
+            <div class="codigo">
+                <pre><code>&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO11&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;Enlace a otro sitio web
+&lt;BR&gt;
+&lt;A HREF = "https://www.dreamworks.com/how-to-train-your-dragon"&gt;Como entrenar a tu dragón&lt;/A&gt;
+&lt;P&gt;Enlace a otra página
+&lt;BR&gt;
+&lt;A HREF = "pagina5.html"&gt;Manejo del color&lt;/A&gt;
+&lt;P&gt;Enlace a otro punto en la misma página
+&lt;BR&gt;
+&lt;A HREF = "#punto19"&gt;Párrafo 19&lt;/A&gt;
+&lt;P&gt;Párrafo 1
+&lt;P&gt;Párrafo 2
+&lt;P&gt;Párrafo 3
+&lt;P&gt;Párrafo 4
+&lt;P&gt;Párrafo 5
+&lt;P&gt;Párrafo 6
+&lt;P&gt;Párrafo 7
+&lt;P&gt;Párrafo 8
+&lt;P&gt;Párrafo 9
+&lt;P&gt;Párrafo 10
+&lt;P&gt;Párrafo 11
+&lt;P&gt;Párrafo 12
+&lt;P&gt;Párrafo 13
+&lt;P&gt;Párrafo 14
+&lt;P&gt;Párrafo 15
+&lt;P&gt;Párrafo 16
+&lt;P&gt;Párrafo 17
+&lt;P&gt;Párrafo 18
+&lt;A NAME = "punto19"&gt;&lt;/A&gt;
+&lt;P&gt;Párrafo 19
+&lt;P&gt;Párrafo 20
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                <button class="button" onclick="copiarCodigo()">Copiar Código</button>
+            </div>
+            <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo funcionan los diferentes tipos de enlaces.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_enlaces.jpg" alt="Resultado de Enlaces en HTML" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigo() {
+            const codigo = `<!DOCTYPE html>
+<HTML>
+<HEAD><TITLE>EJEMPLO11</TITLE></HEAD>
+<BODY>
+<P>Enlace a otro sitio web
+<BR>
+<A HREF = "https://www.dreamworks.com/how-to-train-your-dragon">Como entrenar a tu dragón</A>
+<P>Enlace a otra página
+<BR>
+<A HREF = "pagina5.html">Manejo del color</A>
+<P>Enlace a otro punto en la misma página
+<BR>
+<A HREF = "#punto19">Párrafo 19</A>
+<P>Párrafo 1
+<P>Párrafo 2
+<P>Párrafo 3
+<P>Párrafo 4
+<P>Párrafo 5
+<P>Párrafo 6
+<P>Párrafo 7
+<P>Párrafo 8
+<P>Párrafo 9
+<P>Párrafo 10
+<P>Párrafo 11
+<P>Párrafo 12
+<P>Párrafo 13
+<P>Párrafo 14
+<P>Párrafo 15
+<P>Párrafo 16
+<P>Párrafo 17
+<P>Párrafo 18
+<A NAME = "punto19"></A>
+<P>Párrafo 19
+<P>Párrafo 20
+</BODY>
+</HTML>`;
+            navigator.clipboard.writeText(codigo).then(() => {
+                alert('Código copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Imágenes - Aprender HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Imágenes en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="html.html" class="button">Regresar a HTML</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Introducción</h2>
+            <p>Para realizar estos ejemplos, necesitarás una imagen llamada <strong>imagenprueba.jpg</strong>. Asegúrate de tener esta imagen en el mismo directorio que tu archivo HTML.</p>
+        </section>
+
+        <!-- Ejemplo 1 -->
+        <section>
+            <h2 class="color-3">1. Alineamiento de la Gráfica en la Página</h2>
+            <p>El atributo <strong>ALIGN</strong> permite alinear una gráfica al lado derecho o izquierdo de la página, para centrar una gráfica se inserta la marca de la imagen dentro de la marca <strong>&lt;CENTER&gt;</strong> .. <strong>&lt;/CENTER&gt;</strong>.</p>
+            <section class="ejemplo">
+                <h3 class="color-2">Ejemplo</h3>
+                <div class="codigo">
+                    <pre><code id="codigo1">&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO8&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;IMG SRC = "imagenprueba.jpg" ALIGN = LEFT&gt;
+&lt;BR CLEAR=ALL&gt;
+&lt;CENTER&gt;
+&lt;IMG SRC = "imagenprueba.jpg"&gt;
+&lt;/CENTER&gt;
+&lt;BR CLEAR=ALL&gt;
+&lt;IMG SRC = "imagenprueba.jpg" ALIGN = RIGHT&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                    <button class="button" onclick="copiarCodigo('codigo1')">Copiar Código</button>
+                </div>
+                <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se alinean las gráficas en la página.</p>
+                <img src="imagenes\resultado_alineamiento.jpg" alt="Resultado de Alineamiento de la Gráfica en HTML" class="imagen-resultado">
+            </section>
+        </section>
+
+        <!-- Ejemplo 2 -->
+        <section>
+            <h2 class="color-3">2. Alineamiento de Texto en Relación a la Gráfica</h2>
+            <p>El atributo <strong>ALIGN</strong> permite alinear el texto arriba, en el medio y abajo de una gráfica.</p>
+            <section class="ejemplo">
+                <h3 class="color-2">Ejemplo</h3>
+                <div class="codigo">
+                    <pre><code id="codigo2">&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO9&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;IMG SRC = "imagenprueba.jpg" ALIGN = TOP&gt; Texto en la parte de arriba
+&lt;BR CLEAR=ALL&gt;
+&lt;BR&gt;
+&lt;IMG SRC = "imagenprueba.jpg" ALIGN = MIDDLE&gt; Texto en el medio
+&lt;BR CLEAR=ALL&gt;
+&lt;BR&gt;
+&lt;IMG SRC = "imagenprueba.jpg" ALIGN = BOTTOM&gt; Texto en la parte de abajo
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                    <button class="button" onclick="copiarCodigo('codigo2')">Copiar Código</button>
+                </div>
+                <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se alinea el texto en relación a las gráficas.</p>
+                <img src="imagenes\resultado_alineamiento_texto.jpg" alt="Resultado de Alineamiento de Texto en Relación a la Gráfica en HTML" class="imagen-resultado">
+            </section>
+        </section>
+
+        <!-- Ejemplo 3 -->
+        <section>
+            <h2 class="color-3">3. Espacios Alrededor de la Gráfica y Tamaño</h2>
+            <p>Los atributos <strong>HSPACE</strong> y <strong>VSPACE</strong> definen espacios horizontales y verticales alrededor de una gráfica y los atributos <strong>WIDTH</strong> y <strong>HEIGHT</strong> permiten definir el ancho y alto de una gráfica.</p>
+            <section class="ejemplo">
+                <h3 class="color-2">Ejemplo</h3>
+                <div class="codigo">
+                    <pre><code id="codigo3">&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO10&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P ALIGN = JUSTIFY&gt;&lt;IMG SRC = "imagenprueba.jpg" ALIGN = LEFT HSPACE = 10 VSPACE = 10&gt; Texto que fluye alrededor de una gráfica respetando un espacio horizontal y vertical. Este texto puede ser más de una linea.
+&lt;BR CLEAR=ALL&gt;
+&lt;BR&gt;
+&lt;IMG SRC = "imagenprueba.jpg" ALIGN = LEFT WIDTH = 100 HEIGHT = 70&gt; Gráfica de tamaño modificado (100 x 70)
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                    <button class="button" onclick="copiarCodigo('codigo3')">Copiar Código</button>
+                </div>
+                <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa los espacios alrededor de las gráficas y su tamaño.</p>
+                <img src="imagenes\resultado_espacios.jpg" alt="Resultado de Espacios y Tamaño de la Gráfica en HTML" class="imagen-resultado">
+            </section>
+        </section>
+
+        <!-- Ejemplo 4 -->
+        <section>
+            <h2 class="color-3">4. Gráfica de Fondo para una Página</h2>
+            <p>El atributo <strong>BACKGROUND</strong> dentro de la marca <strong>&lt;BODY&gt;</strong> permite definir una gráfica como fondo de una página, de ser necesario se puede cambiar el color de la letra con el atributo <strong>TEXT</strong>.</p>
+            <section class="ejemplo">
+                <h3 class="color-2">Ejemplo</h3>
+                <div class="codigo">
+                    <pre><code id="codigo4">&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO12&lt;/TITLE&gt; &lt;/HEAD&gt;
+&lt;BODY BACKGROUND = "imagenprueba.jpg" TEXT = 000000&gt;
+&lt;H1&gt;TEXTO EN COLOR NEGRO&lt;/H1&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                    <button class="button" onclick="copiarCodigo('codigo4')">Copiar Código</button>
+                </div>
+                <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se establece una gráfica como fondo de la página.</p>
+                <img src="imagenes\resultado_fondo.jpg" alt="Resultado de Gráfica de Fondo en HTML" class="imagen-resultado">
+            </section>
+        </section>
+    </main>
+
+    <script>
+        function copiarCodigo(idCodigo) {
+            // Obtén el código correspondiente a través de su ID
+            const codigo = document.getElementById(idCodigo).textContent;
+
+            // Crea un campo de texto temporal
+            const textarea = document.createElement('textarea');
+            textarea.value = codigo;
+
+            // Agrega el campo de texto al DOM
+            document.body.appendChild(textarea);
+
+            // Selecciona el texto del campo
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+            // Copia el texto seleccionado al portapapeles
+            document.execCommand('copy');
+
+            // Elimina el campo de texto temporal
+            document.body.removeChild(textarea);
+
+            // Opcional: Alerta o mensaje que indica que el código fue copiado
+            alert("Código copiado al portapapeles!");
+        }
+    </script>
+</body>
+</html>

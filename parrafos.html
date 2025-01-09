@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Párrafos - Aprender HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Párrafos en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="html.html" class="button">Regresar a HTML</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Párrafos en HTML</h2>
+            <p>La marca <strong>&lt;P&gt;</strong> se utiliza para crear párrafos, el cierre de la marca es opcional <strong>&lt;/P&gt;</strong>; puede contener el atributo <strong>ALIGN</strong> que manipula la apariencia del párrafo. El valor por defecto es <strong>LEFT</strong>. Los valores para el atributo <strong>ALIGN</strong> se muestran en la siguiente tabla:</p>
+            <div class="tabla-centrada">
+                <table>
+                    <tr>
+                        <th>ALINEAMIENTO</th>
+                        <th>VALOR</th>
+                    </tr>
+                    <tr>
+                        <td>IZQUIERDA</td>
+                        <td>LEFT</td>
+                    </tr>
+                    <tr>
+                        <td>DERECHA</td>
+                        <td>RIGHT</td>
+                    </tr>
+                    <tr>
+                        <td>JUSTIFICADO</td>
+                        <td>JUSTIFY</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo</h3>
+            <div class="codigo">
+                <pre><code>&lt;HTML&gt;
+&lt;HEAD&gt; &lt;TITLE&gt;EJEMPLO2&lt;/TITLE&gt; &lt;/HEAD&gt;
+
+&lt;BODY&gt;
+&lt;H3&gt;Alineamiento a la izquierda&lt;/H3&gt;
+&lt;P ALIGN = LEFT&gt;Los bits, "el ADN de la información", se estan transformando en el elemento
+básico de la interacción humana. La diferencia entre una pantalla de televisión y la de una computadora
+se ha reducido meramente a una cuestion de tamaño. Y lo que hasta hace poco era un medio masivo, se
+esta convirtiendo en una doble vía de comunicación personalizada.&lt;/P&gt;
+
+&lt;H3&gt;Alineamiento a la derecha&lt;/H3&gt;
+&lt;P ALIGN = RIGHT&gt;Los bits, "el ADN de la información", se estan transformando en el
+elemento básico de la interacción humana. La diferencia entre una pantalla de televisión y la de una
+computadora se ha reducido meramente a una cuestion de tamaño. Y lo que hasta hace poco era un
+medio masivo, se esta convirtiendo en una doble vía de comunicación personalizada.&lt;/P&gt;
+
+&lt;H3&gt;Alineamiento justificado&lt;/H3&gt;
+&lt;P ALIGN = JUSTIFY&gt;Los bits, "el ADN de la información", se estan transformando en el
+elemento básico de la interacción humana. La diferencia entre una pantalla de televisión y la de una
+computadora se ha reducido meramente a una cuestion de tamaño. Y lo que hasta hace poco era un
+medio masivo, se esta convirtiendo en una doble vía de comunicación personalizada.&lt;/P&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                <button class="button" onclick="copiarCodigo()">Copiar Código</button>
+            </div>
+            <p class="mensaje">¡Inténtalo! Prueba este código en tu navegador y observa cómo se ven los diferentes alineamientos de párrafos.</p>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_parrafos.jpg" alt="Resultado de Párrafos en HTML" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigo() {
+            const codigo = `<!DOCTYPE html>
+<HTML>
+<HEAD><TITLE>EJEMPLO2</TITLE></HEAD>
+<BODY>
+<H3>Alineamiento a la izquierda</H3>
+<P ALIGN = LEFT>Los bits, "el ADN de la información", se estan transformando en el elemento
+básico de la interacción humana. La diferencia entre una pantalla de televisión y la de una computadora
+se ha reducido meramente a una cuestion de tamaño. Y lo que hasta hace poco era un medio masivo, se
+esta convirtiendo en una doble vía de comunicación personalizada.</P>
+
+<H3>Alineamiento a la derecha</H3>
+<P ALIGN = RIGHT>Los bits, "el ADN de la información", se estan transformando en el
+elemento básico de la interacción humana. La diferencia entre una pantalla de televisión y la de una
+computadora se ha reducido meramente a una cuestion de tamaño. Y lo que hasta hace poco era un
+medio masivo, se esta convirtiendo en una doble vía de comunicación personalizada.</P>
+
+<H3>Alineamiento justificado</H3>
+<P ALIGN = JUSTIFY>Los bits, "el ADN de la información", se estan transformando en el
+elemento básico de la interacción humana. La diferencia entre una pantalla de televisión y la de una
+computadora se ha reducido meramente a una cuestion de tamaño. Y lo que hasta hace poco era un
+medio masivo, se esta convirtiendo en una doble vía de comunicación personalizada.</P>
+</BODY>
+</HTML>`;
+            navigator.clipboard.writeText(codigo).then(() => {
+                alert('Código copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código');
+            });
+        }
+    </script>
+</body>
+</html>

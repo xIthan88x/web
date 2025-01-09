@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario y Base de Datos - Aprender PHP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Cómo crear un formulario y almacenar los datos en una base de datos</h1>
+        <nav>
+            <ul>
+                <li><a href="php.html" class="button">Regresar a PHP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Formulario y Guardado en Base de Datos</h2>
+            <p>En este tutorial, aprenderás cómo crear un formulario en HTML para ingresar datos y cómo guardar esa información en una base de datos MySQL utilizando PHP.</p>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo de Código HTML</h3>
+            <div class="codigo">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Formulario de Datos&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Formulario de Datos&lt;/h1&gt;
+    &lt;form action="procesar_datos.php" method="post"&gt;
+        Nombre: 
+        &lt;input type="text" name="nombre" required&gt;&lt;br&gt;
+        Apellido Paterno: 
+        &lt;input type="text" name="apellido_paterno" required&gt;&lt;br&gt;
+        Apellido Materno: 
+        &lt;input type="text" name="apellido_materno" required&gt;&lt;br&gt;
+        Código Postal: 
+        &lt;input type="text" name="codigo_postal" required&gt;&lt;br&gt;
+        Edad: 
+        &lt;input type="number" name="edad" required&gt;&lt;br&gt;
+        &lt;input type="submit" value="Enviar"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <button class="button" onclick="copiarCodigoHTML()">Copiar Código HTML</button>
+            </div>
+            <p class="mensaje">Este código realiza un formulario y el método <code>action="procesar_datos.php"</code> sirve para enviar la información a la base de datos.</p>
+        </section>
+        <section>
+            <h3 class="color-2">Código para procesar_datos.php</h3>
+            <div class="codigo">
+                <pre><code>&lt;?php 
+$nombre = $_POST['nombre'];
+$apellido_paterno = $_POST['apellido_paterno'];
+$apellido_materno = $_POST['apellido_materno'];
+$codigo_postal = $_POST['codigo_postal'];
+$edad = $_POST['edad'];
+
+$conexion = mysqli_connect("localhost", "root", "usbw", "base1") or die("Problemas con la conexión"); 
+mysqli_query($conexion, "insert into alumnos2(nombre,apellido_paterno,apellido_materno,codigo_postal,edad) values ('$nombre','$apellido_paterno','$apellido_materno','$codigo_postal','$edad')") or die("Problemas en el select" . mysqli_error($conexion)); 
+
+if ($edad >= 18) {
+    echo "El alumno es mayor de edad.";
+} else {
+    echo "El alumno es menor de edad.";
+}
+
+mysqli_close($conexion);
+?&gt;</code></pre>
+                <button class="button" onclick="copiarCodigoPHP()">Copiar Código PHP</button>
+            </div>
+            <p class="mensaje">Este código PHP realiza la conexión con la base de datos y guarda la información enviada desde el formulario. También verifica si el alumno es mayor de edad o menor de edad.</p>
+        </section>
+        <section>
+            <h3 class="color-2">Creación de la Base de Datos</h3>
+            <p>Para almacenar la información, primero debemos crear una base de datos y una tabla en MySQL con los siguientes detalles:</p>
+            <ol>
+                <li>Crear una base de datos con el nombre <strong>base1</strong></li>
+                <li>Crear una tabla con el nombre <strong>alumnos2</strong> que tenga los siguientes campos:
+                    <ul>
+                        <li><strong>nombre</strong> - tipo varchar(50)</li>
+                        <li><strong>apellido_paterno</strong> - tipo varchar(50)</li>
+                        <li><strong>apellido_materno</strong> - tipo varchar(50)</li>
+                        <li><strong>codigo_postal</strong> - tipo int</li>
+                        <li><strong>edad</strong> - tipo int</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_formulario_datos_1.jpg" alt="Resultado del Formulario de Datos 1" class="imagen-resultado">
+            <img src="imagenes\resultado_formulario_datos_2.jpg" alt="Resultado del Formulario de Datos 2" class="imagen-resultado">
+            <img src="imagenes\resultado_formulario_datos_3.jpg" alt="Resultado del Formulario de Datos 3" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigoHTML() {
+            const codigoHTML = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Datos</title>
+</head>
+<body>
+    <h1>Formulario de Datos</h1>
+    <form action="procesar_datos.php" method="post">
+        Nombre: 
+        <input type="text" name="nombre" required><br>
+        Apellido Paterno: 
+        <input type="text" name="apellido_paterno" required><br>
+        Apellido Materno: 
+        <input type="text" name="apellido_materno" required><br>
+        Código Postal: 
+        <input type="text" name="codigo_postal" required><br>
+        Edad: 
+        <input type="number" name="edad" required><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>`;
+            navigator.clipboard.writeText(codigoHTML).then(() => {
+                alert('Código HTML copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código HTML');
+            });
+        }
+
+        function copiarCodigoPHP() {
+            const codigoPHP = `<?php 
+$nombre = $_POST['nombre'];
+$apellido_paterno = $_POST['apellido_paterno'];
+$apellido_materno = $_POST['apellido_materno'];
+$codigo_postal = $_POST['codigo_postal'];
+$edad = $_POST['edad'];
+
+$conexion = mysqli_connect("localhost", "root", "usbw", "base1") or die("Problemas con la conexión"); 
+mysqli_query($conexion, "insert into alumnos2(nombre,apellido_paterno,apellido_materno,codigo_postal,edad) values ('$nombre','$apellido_paterno','$apellido_materno','$codigo_postal','$edad')") or die("Problemas en el select" . mysqli_error($conexion)); 
+
+if ($edad >= 18) {
+    echo "El alumno es mayor de edad.";
+} else {
+    echo "El alumno es menor de edad.";
+}
+
+mysqli_close($conexion);
+?>`;
+            navigator.clipboard.writeText(codigoPHP).then(() => {
+                alert('Código PHP copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código PHP');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios en HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Formularios en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="html.html" class="button">Regresar a HTML</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">Atributos y Elementos del Formulario</h2>
+            <p>La marca <strong>&lt;FORM&gt;</strong> permite crear formularios en HTML. Los atributos principales son:</p>
+            <ul>
+                <li><strong>METHOD</strong>: Especifica cómo se enviarán los datos al servidor (GET o POST).</li>
+                <li><strong>ACTION</strong>: URL del programa que procesará los datos del formulario.</li>
+                <li><strong>NAME</strong>: Nombre del formulario.</li>
+            </ul>
+            <p>La marca <strong>&lt;INPUT&gt;</strong> se utiliza para crear elementos dentro de un formulario. Los principales tipos de elementos son:</p>
+            <ul>
+                <li><strong>button</strong>: Crea un botón de comando.</li>
+                <li><strong>reset</strong>: Crea un botón para borrar los datos.</li>
+                <li><strong>submit</strong>: Crea un botón para enviar los datos al servidor.</li>
+                <li><strong>checkbox</strong>: Crea casillas de verificación.</li>
+                <li><strong>radio</strong>: Crea un grupo de opciones donde solo se puede seleccionar una.</li>
+                <li><strong>password</strong>: Crea un campo para ingresar contraseñas.</li>
+                <li><strong>text</strong>: Crea un campo de texto de una sola línea.</li>
+                <li><strong>textarea</strong>: Crea un campo de texto para varias líneas.</li>
+                <li><strong>select</strong>: Crea un campo de selección de opciones.</li>
+                <li><strong>hidden</strong>: Crea un elemento oculto.</li>
+            </ul>
+            <p>Los principales eventos que se pueden generar son:</p>
+            <ul>
+                <li><strong>onClick</strong>: Disparado cuando se hace clic sobre el elemento.</li>
+                <li><strong>onFocus</strong>: Disparado cuando un elemento recibe el foco.</li>
+                <li><strong>onBlur</strong>: Disparado cuando un elemento pierde el foco.</li>
+                <li><strong>onChange</strong>: Disparado cuando el valor de un campo cambia.</li>
+            </ul>
+        </section>
+        <section class="ejemplo">
+            <h3 class="color-2">Ejemplo de Formulario</h3>
+            <div class="codigo">
+                <pre><code>&lt;HTML&gt;
+&lt;HEAD&gt;&lt;TITLE&gt;EJEMPLO14&lt;/TITLE&gt;&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;FORM NAME="frmEncuesta" METHOD="POST" ACTION="/scripts/encuesta.asp"&gt;
+    &lt;P&gt;Código:&lt;/P&gt;
+    &lt;INPUT TYPE="text" NAME="txtCodigo" MAXLENGTH="8" SIZE="8"&gt;
+    &lt;P&gt;Nombre:&lt;/P&gt;
+    &lt;INPUT TYPE="text" NAME="txtNombre" MAXLENGTH="40" SIZE="40"&gt;
+    &lt;P&gt;Sexo:&lt;/P&gt;
+    &lt;INPUT TYPE="radio" NAME="optSexo" VALUE="femenino" CHECKED&gt;Femenino
+    &lt;INPUT TYPE="radio" NAME="optSexo" VALUE="masculino"&gt;Masculino
+    &lt;P&gt;Programa:&lt;/P&gt;
+    &lt;SELECT NAME="cboPrograma"&gt;
+        &lt;OPTION VALUE="10"&gt;Ingeniería de Sistemas&lt;/OPTION&gt;
+        &lt;OPTION VALUE="20"&gt;Psicología&lt;/OPTION&gt;
+        &lt;OPTION VALUE="15"&gt;Contaduría Pública&lt;/OPTION&gt;
+    &lt;/SELECT&gt;
+    &lt;P&gt;Áreas de Estudio:&lt;/P&gt;
+    &lt;INPUT TYPE="checkbox" NAME="Matematica" VALUE="1"&gt;Matemática&lt;/INPUT&gt;
+    &lt;INPUT TYPE="checkbox" NAME="Humanidades" VALUE="2"&gt;Humanidades&lt;/INPUT&gt;
+    &lt;INPUT TYPE="checkbox" NAME="Tecnica_Profesional" VALUE="3"&gt;Técnica Profesional&lt;/INPUT&gt;
+    &lt;P&gt;Sugerencias:&lt;/P&gt;
+    &lt;TEXTAREA NAME="txtSugerencias" ROWS="5" COLS="50"&gt;&lt;/TEXTAREA&gt;
+    &lt;P&gt;
+    &lt;INPUT TYPE="submit" VALUE="Enviar"&gt;
+    &lt;INPUT TYPE="reset" VALUE="Limpiar"&gt;
+&lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+                <button class="button" onclick="copiarCodigo()">Copiar Código</button>
+            </div>
+        </section>
+        <section class="resultado">
+            <h3 class="color-2">Resultado</h3>
+            <img src="imagenes\resultado_formulario.jpg" alt="Resultado de Formulario en HTML" class="imagen-resultado">
+        </section>
+    </main>
+    <script>
+        function copiarCodigo() {
+            const codigo = `<!DOCTYPE html>
+<HTML>
+<HEAD><TITLE>EJEMPLO14</TITLE></HEAD>
+<BODY>
+<FORM NAME="frmEncuesta" METHOD="POST" ACTION="/scripts/encuesta.asp">
+    <P>Código:</P>
+    <INPUT TYPE="text" NAME="txtCodigo" MAXLENGTH="8" SIZE="8">
+    <P>Nombre:</P>
+    <INPUT TYPE="text" NAME="txtNombre" MAXLENGTH="40" SIZE="40">
+    <P>Sexo:</P>
+    <INPUT TYPE="radio" NAME="optSexo" VALUE="femenino" CHECKED>Femenino
+    <INPUT TYPE="radio" NAME="optSexo" VALUE="masculino">Masculino
+    <P>Programa:</P>
+    <SELECT NAME="cboPrograma">
+        <OPTION VALUE="10">Ingeniería de Sistemas</OPTION>
+        <OPTION VALUE="20">Psicología</OPTION>
+        <OPTION VALUE="15">Contaduría Pública</OPTION>
+    </SELECT>
+    <P>Áreas de Estudio:</P>
+    <INPUT TYPE="checkbox" NAME="Matematica" VALUE="1">Matemática
+    <INPUT TYPE="checkbox" NAME="Humanidades" VALUE="2">Humanidades
+    <INPUT TYPE="checkbox" NAME="Tecnica_Profesional" VALUE="3">Técnica Profesional
+    <P>Sugerencias:</P>
+    <TEXTAREA NAME="txtSugerencias" ROWS="5" COLS="50"></TEXTAREA>
+    <P>
+    <INPUT TYPE="submit" VALUE="Enviar">
+    <INPUT TYPE="reset" VALUE="Limpiar">
+</FORM>
+</BODY>
+</HTML>`;
+            navigator.clipboard.writeText(codigo).then(() => {
+                alert('Código copiado al portapapeles');
+            }).catch(err => {
+                alert('Error al copiar el código');
+            });
+        }
+    </script>
+</body>
+</html>

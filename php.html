@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP - Aprender PHP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajuste para las imágenes */
+        .imagen-informacion {
+            max-width: 250px; /* Limita el ancho máximo a 250px */
+            width: 100%; /* Hace que se ajuste al contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block;
+            margin: 10px auto; /* Centra las imágenes */
+            border-radius: 8px; /* Opcional: agrega bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="color-3">Aprender PHP</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button">Regresar al Inicio</a></li>
+                <li><a href="#seccion-aprender" class="button">¿Qué quieres aprender hoy?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="color-3">1. ¿Qué es PHP y para qué se utiliza?</h2>
+            <p>PHP (Hypertext Preprocessor) es un lenguaje de programación del lado del servidor diseñado para el desarrollo web. Se utiliza para crear páginas web dinámicas e interactivas, permitiendo la ejecución de scripts en el servidor antes de enviar el contenido al navegador del usuario.</p>
+            <img src="imagenes\imagen_php_utilidad.jpg" alt="PHP Utilidad" class="imagen-informacion">
+        </section>
+        <section>
+            <h2 class="color-3">2. ¿Qué programas requiero para poder utilizar PHP?</h2>
+            <p>Para utilizar PHP necesitas un servidor web, como Apache o Nginx, y un intérprete de PHP. También puedes usar un editor de texto simple como el Bloc de Notas o un entorno de desarrollo integrado (IDE) como Visual Studio Code o PHPStorm para facilitar la codificación.</p>
+        </section>
+        <section>
+            <h2 class="color-3">3. ¿Qué es un servidor web?</h2>
+            <p>Un servidor web es un software que almacena, procesa y entrega páginas web a los usuarios. Los servidores web manejan solicitudes HTTP y responden con contenido web, como archivos HTML, imágenes, videos y scripts.</p>
+            <img src="imagenes\imagen_servidor_web.jpg" alt="Servidor Web" class="imagen-informacion">
+        </section>
+        <section>
+            <h2 class="color-3">4. ¿Qué es MySQL y qué diferencia hay entre SQL y MySQL?</h2>
+            <p>MySQL es un sistema de gestión de bases de datos relacional (RDBMS) que utiliza SQL (Structured Query Language) para gestionar y manipular datos. SQL es un lenguaje estándar para interactuar con bases de datos, mientras que MySQL es un software específico que implementa SQL para gestionar bases de datos.</p>
+            <img src="imagenes\imagen_mysql.jpg" alt="MySQL" class="imagen-informacion">
+        </section>
+        <section>
+            <h2 class="color-3">5. ¿Cómo se usa PHP directamente en una página web?</h2>
+            <p>Para usar PHP en una página web, debes crear archivos con la extensión `.php` y escribir código PHP dentro de las etiquetas `&lt;?php ?&gt;`. El servidor web procesará el código PHP y generará contenido HTML para enviar al navegador del usuario.</p>
+        </section>
+        <section>
+            <h2 class="color-3">6. ¿Qué son las variables y para qué sirven?</h2>
+            <p>Las variables son contenedores que almacenan datos. En PHP, las variables se utilizan para almacenar valores que pueden ser usados y manipulados a lo largo del script. Se definen utilizando el signo `$` seguido del nombre de la variable, como `$variable`.</p>
+            <img src="imagenes\imagen_variables_php.jpg" alt="Variables en PHP" class="imagen-informacion">
+        </section>
+        <section>
+            <h2 class="color-3">7. ¿Cuál es la variable string y qué función tiene?</h2>
+            <p>Una variable string en PHP es una cadena de texto. Se utiliza para almacenar y manipular texto. Las cadenas de texto se delimitan con comillas simples (`'`) o dobles (`"`), como `$texto = 'Hola, mundo!';`.</p>
+        </section>
+        <section>
+            <h2 class="color-3">8. ¿Cómo se usa la estructura if en PHP y para qué sirve?</h2>
+            <p>La estructura `if` en PHP se utiliza para ejecutar código condicionalmente. Si la condición evaluada es verdadera, se ejecuta el bloque de código dentro de la estructura `if`. La sintaxis básica es:</p>
+            <pre><code>&lt;?php
+if ($condicion) {
+    // código a ejecutar si la condición es verdadera
+}
+?&gt;</code></pre>
+        </section>
+        <section>
+            <h2 class="color-3">9. ¿Cuáles son los repetidores que se usan en PHP y cómo se ocupan?</h2>
+            <p>Los repetidores en PHP son estructuras que permiten ejecutar un bloque de código múltiples veces. Los principales repetidores son:</p>
+            <ul>
+                <li><strong>for:</strong> Se utiliza para repetir un bloque de código un número específico de veces.</li>
+                <li><strong>while:</strong> Repite un bloque de código mientras una condición sea verdadera.</li>
+                <li><strong>do-while:</strong> Similar a `while`, pero la condición se evalúa después de ejecutar el bloque de código.</li>
+                <li><strong>foreach:</strong> Se utiliza para iterar sobre arreglos y objetos.</li>
+            </ul>
+        </section>
+        <section class="video">
+            <h2 class="color-3">Video Explicativo</h2>
+            <div class="video-centrado">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iOVXAbI73WM?si=r9OSgy5HbNdScnbd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section>
+            <h2 class="color-3">¿Cómo ejecutar tu código PHP y HTML?</h2>
+            <p>Para ejecutar tu código PHP y HTML en tu computadora, necesitas un servidor local que pueda interpretar PHP. Algunas opciones populares son:</p>
+            <ul>
+                <li><strong>USBWebServer:</strong> Una opción ligera y fácil de usar, ideal si no deseas instalar un servidor completo.</li>
+                <li><strong>XAMPP:</strong> Un paquete que incluye Apache, MySQL y PHP. Es muy utilizado y fácil de instalar.</li>
+                <li><strong>WampServer:</strong> Similar a XAMPP, pero optimizado para Windows.</li>
+            </ul>
+            <p>Una vez que hayas descargado e instalado uno de estos programas, sigue estos pasos:</p>
+            <ol>
+                <li><strong>Instala el servidor web:</strong> Descarga e instala cualquiera de las aplicaciones mencionadas, siguiendo las instrucciones del sitio web oficial.</li>
+                <li><strong>Configura el servidor:</strong> Asegúrate de que Apache y PHP estén activados en la configuración de la aplicación.</li>
+                <li><strong>Coloca tus archivos PHP:</strong> Los archivos `.php` y `.html` deben estar en la carpeta `htdocs` o `www` dentro de la instalación del servidor (dependiendo del servidor que uses).</li>
+                <li><strong>Abre el navegador:</strong> En el navegador, ingresa `localhost/nombre_de_tu_archivo.php` (o el nombre que hayas dado a tu archivo) para ejecutar el código.</li>
+            </ol>
+            <p>Una vez que hayas seguido estos pasos, podrás ver el resultado de tu formulario o cualquier otro código PHP ejecutado en tu navegador.</p>
+        </section>
+        <section id="seccion-aprender">
+            <h2 class="color-3">¿Qué quieres aprender hoy?</h2>
+            <div class="opciones-aprendizaje">
+                <div class="fila">
+                    <div class="opcion">
+                        <a href="crear_formulario.html" class="button">Cómo se crea un formulario</a>
+                    </div>
+                    <div class="opcion">
+                        <a href="formulario_bloc_notas.html" class="button">Formulario que se guarda en un bloc de notas</a>
+                    </div>
+                    <div class="opcion">
+                        <a href="crear_base_datos.html" class="button">Cómo crear una base de datos y una tabla en MySQL</a>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="opcion">
+                        <a href="crear_registro.html" class="button">Cómo crear un registro en MySQL</a>
+                    </div>
+                    <div class="opcion">
+                        <a href="formulario_base_datos.html" class="button">Formulario que se almacena en una base de datos</a>
+                    </div>
+                    <div class="opcion">
+                        <a href="consultar_informacion.html" class="button">Formulario que consulta información en base de datos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
