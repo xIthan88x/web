@@ -105,26 +105,6 @@ header h2 {
     display: inline-block;
 }
 
-/* Tarjetas */
-.tarjeta {
-    background-color: #800000;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.tarjeta h3 {
-    font-size: 2em;
-    margin: 0;
-    color: white;
-    background-color: #B22222;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-
 /* Sección de vales */
 .vales {
     background-color: rgba(50, 50, 50, 0.8);
@@ -260,3 +240,6 @@ header h2 {
     color: #E63946;
     margin: 20px 0;
 }
+
+/* Sección de películas (sin cambios, como pediste) */
+/* Dejo esta sección tal cual estaba en tu código original */
