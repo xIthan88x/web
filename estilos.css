@@ -307,7 +307,11 @@ border-radius: 10px;
     text-align: center;
     line-height: 1.3;
 }
-
+.mas-razones h3 {
+    font-size: 2.5em; /* Aumenté el tamaño para mayor visibilidad */
+    color: #C70039; /* Cambié el color a un tono más fuerte que contraste mejor con el fondo */
+    margin-bottom: 20px;
+}
 /* Pronóstico del Amor */
 .pronostico-amor {
     background-color: rgba(50, 50, 50, 0.9);
