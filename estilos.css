@@ -578,93 +578,83 @@ background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
     }
 }
 /* Estilos del Pronóstico del Amor */
-  
+
 .pronostico-amor {
-  
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido blanco */
-  
-    padding: 30px;
-  
-    border-radius: 15px;
-  
-    margin: 30px auto;
-  
-    max-width: 600px;
-  
-    text-align: center;
-  
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  
-}
-  
 
-  
+background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido blanco */
+
+padding: 30px;
+
+border-radius: 15px;
+
+margin: 30px auto;
+
+max-width: 600px;
+
+text-align: center;
+
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+}
+
 .pronostico-amor h3 {
-  
-    font-size: 2.5em;
-  
-    color: #FF6F61; /* Color rojo romántico */
-  
-    margin-bottom: 20px;
-  
-    font-family: 'Georgia', serif;
-  
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  
-}
-  
 
-  
+font-size: 2.5em;
+
+color: #FF6F61; /* Color rojo romántico */
+
+margin-bottom: 20px;
+
+font-family: 'Georgia', serif;
+
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
 .pronostico-amor p {
-  
-    font-size: 1.5em;
-  
-    color: #333;
-  
-    margin: 10px 0;
-  
-    line-height: 1.6;
-  
-}
-  
 
-  
+font-size: 1.5em;
+
+color: #333;
+
+margin: 10px 0;
+
+line-height: 1.6;
+
+}
+
 .pronostico-amor .pronostico {
-  
-    font-size: 1.8em;
-  
-    font-weight: bold;
-  
-    color: #e63946; /* Rojo cálido para el pronóstico */
-  
-    margin-top: 20px;
-  
-    font-family: 'Cursive', sans-serif;
-  
-}
-  
 
-  
+font-size: 1.8em;
+
+font-weight: bold;
+
+color: #e63946; /* Rojo cálido para el pronóstico */
+
+margin-top: 20px;
+
+font-family: 'Cursive', sans-serif;
+
+}
+
 .pronostico-amor .advertencia {
-  
-    font-size: 1.3em;
-  
-    color: #6a1b9a; /* Color morado para advertencia */
-  
-    margin-top: 15px;
-  
-    font-style: italic;
-  
-}
-  
 
-  
+font-size: 1.3em;
+
+color: #6a1b9a; /* Color morado para advertencia */
+
+margin-top: 15px;
+
+font-style: italic;
+
+}
+
 .pronostico-amor .icono-clima {
-  
-    font-size: 3em;
-  
-    color: #FF6F61;
-  
-    margin: 20px 0;
-  
-} 
+
+font-size: 3em;
+
+color: #FF6F61;
+
+margin: 20px 0;
+
+    } 
