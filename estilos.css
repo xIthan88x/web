@@ -454,9 +454,9 @@ background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
 .mas-razones {
     display: flex;
     overflow-x: auto;
-    gap: 15px; /* Reduce el espacio entre elementos */
+    gap: 15px;
     scroll-behavior: smooth;
-    padding: 15px; /* Espaciado interno */
+    padding: 15px;
 }
 
 .mas-razones .slider-container {
@@ -467,10 +467,10 @@ background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
 
 /* Estilos para cada elemento */
 .mas-razones .razon-item {
-    border-radius: 8px; /* Bordes ligeramente más pequeños */
+    border-radius: 8px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    max-width: 280px; /* Un poco más pequeño */
-    min-height: 180px; /* Reduce la altura */
+    width: 250px; /* Tamaño fijo para mantener uniformidad */
+    height: 220px;
     background: #fff;
     padding: 12px;
     display: flex;
@@ -481,21 +481,29 @@ background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Ajuste de imágenes dentro de los elementos */
+.mas-razones .razon-item img {
+    width: 100%; /* Ajuste automático para que ocupe todo el contenedor */
+    height: 140px; /* Altura fija para evitar deformaciones */
+    object-fit: cover; /* Recorta la imagen para ajustarse bien */
+    border-radius: 6px; /* Mantiene bordes redondeados */
+}
+
 /* Efecto al pasar el mouse */
 .mas-razones .razon-item:hover {
-    transform: scale(1.1); /* Aumenta menos para que no se desborde */
+    transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Efecto cuando está seleccionado */
 .mas-razones .razon-item.selected {
-    transform: scale(1.2); /* Un poco más moderado */
+    transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Estilo del texto debajo de cada imagen */
 .mas-razones .razon-item p {
-    font-size: 1em; /* Reduce ligeramente el tamaño del texto */
+    font-size: 1em;
     color: #d6336c;
     margin-top: 10px;
     font-weight: bold;
@@ -511,12 +519,16 @@ background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
     }
 
     .mas-razones .razon-item {
-        max-width: 90%; /* Asegura que se adapte bien en móviles */
-        min-height: 160px; /* Reduce más la altura */
+        width: 220px; /* Reduce tamaño en móviles */
+        height: 200px;
+    }
+
+    .mas-razones .razon-item img {
+        height: 120px; /* Ajusta la imagen en móvil */
     }
 
     .mas-razones .razon-item p {
-        font-size: 0.9em; /* Ajuste del texto para pantallas pequeñas */
+        font-size: 0.9em;
     }
 }
 /* Estilos del Pronóstico del Amor */
