@@ -451,124 +451,74 @@ background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
 }
 
 /* Estilo para la sección de Más Razones */
-
-.mas-razones {
-
-background-color: #f8bbd0;
-
-padding: 20px;
-
-border-radius: 10px;
-
-margin: 20px 0;
-
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-text-align: center;
-
-}
-
-/* Título de la sección */
-
-.mas-razones h3 {
-
-font-size: 2em;
-
-color: #d6336c;
-
-margin-bottom: 20px;
-
-font-family: 'Georgia', serif;
-
-letter-spacing: 1px;
-
-}
-
-/* Contenedor deslizable */
-
-.mas-razones .slider-container {
-
-display: flex;
-
-overflow-x: auto;
-
-gap: 40px;
-
-scroll-behavior: smooth; /* Desplazamiento suave */
-
-}
-
-.mas-razones .razon-item {
-
-background-color: #fff;
-
-border-radius: 8px;
-
-width: 250px;
 .mas-razones {
     display: flex;
     overflow-x: auto;
-    gap: 20px;
+    gap: 15px; /* Reduce el espacio entre elementos */
     scroll-behavior: smooth;
-    padding: 20px; /* Agrega espacio interno para que no se vea apretado */
+    padding: 15px; /* Espaciado interno */
 }
 
 .mas-razones .slider-container {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: nowrap;
 }
 
 /* Estilos para cada elemento */
 .mas-razones .razon-item {
-    border-radius: 10px; /* Bordes más redondeados */
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    max-width: 320px; /* Asegura un tamaño más grande */
-    min-height: 220px; /* Expande la altura */
-    background: #fff; /* Fondo para resaltar el contenido */
-    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes ligeramente más pequeños */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 280px; /* Un poco más pequeño */
+    min-height: 180px; /* Reduce la altura */
+    background: #fff;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Efecto al pasar el mouse */
 .mas-razones .razon-item:hover {
-    transform: scale(1.15); /* Aumenta un poco el tamaño */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1); /* Aumenta menos para que no se desborde */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Efecto cuando está seleccionado */
 .mas-razones .razon-item.selected {
-    transform: scale(1.3); /* Se expande menos para que no se desborde */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.2); /* Un poco más moderado */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Estilo del texto debajo de cada imagen */
 .mas-razones .razon-item p {
-    font-size: 1.2em; /* Texto más grande */
+    font-size: 1em; /* Reduce ligeramente el tamaño del texto */
     color: #d6336c;
-    margin-top: 12px;
+    margin-top: 10px;
     font-weight: bold;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
     .mas-razones {
-        flex-direction: column;
-        align-items: center;
+        gap: 10px;
+        padding: 10px;
     }
+
     .mas-razones .razon-item {
-        max-width: 90%; /* Ocupa más espacio en pantallas pequeñas */
-        min-height: 200px;
+        max-width: 90%; /* Asegura que se adapte bien en móviles */
+        min-height: 160px; /* Reduce más la altura */
+    }
+
+    .mas-razones .razon-item p {
+        font-size: 0.9em; /* Ajuste del texto para pantallas pequeñas */
     }
 }
-
 /* Estilos del Pronóstico del Amor */
 
 .pronostico-amor {
