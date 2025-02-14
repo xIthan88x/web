@@ -8,198 +8,8 @@ body {
     font-size: 16px; /* Ajuste de tamaño de fuente base */
 }
 
-/* Header */
-header {
-    background-color: #FF3366;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Contenido */
-.contenido {
-    padding: 20px;
-}
-
-/* Noticia principal */
-.noticia-principal h2 {
-    font-size: 1.8rem;
-}
-
-.noticia-principal img {
-    width: 100%;
-    max-width: 200px;
-    margin: 10px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.noticia-principal p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Vales */
-.vales {
-    margin-top: 20px;
-}
-
-.vales h3 {
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.vales .fila {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-
-.vales .vale {
-    width: 48%;
-    background-color: #FFF0F5;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-}
-
-.vales .titulo-pequeno {
-    font-size: 1.2rem;
-    color: #FF3366;
-}
-
-/* Razones */
-.razones {
-    margin-top: 30px;
-    background-color: #FFF0F5;
-    padding: 15px;
-}
-
-.razones h3 {
-    font-size: 2em;
-    text-align: center;
-}
-
-.razones ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.razones ul li {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 10px;
-}
-
-/* Investigación especial */
-.investigacion {
-    margin-top: 30px;
-    padding: 15px;
-}
-
-.investigacion h3 {
-    font-size: 2em;
-    text-align: center;
-}
-
-.investigacion ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.investigacion ul li {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 10px;
-}
-
-/* Más razones (películas) */
-.mas-razones {
-    padding: 20px;
-    background-color: #FFF0F5;
-}
-
-.mas-razones h3 {
-    font-size: 2.2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Contenedor del slider */
-.mas-razones .slider-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-/* Elementos individuales (cada razón de película) */
-.mas-razones .razon-item {
-    width: 48%; /* Usar el 48% del ancho, permitiendo dos elementos por fila */
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: center;
-}
-
-/* Ajustes de las imágenes dentro de las razones */
-.mas-razones .razon-item img {
-    width: 100%; /* Hacer las imágenes del 100% del contenedor */
-    max-width: 300px; /* Limitar el tamaño máximo de la imagen */
-    height: auto;
-    border-radius: 10px; /* Bordes redondeados */
-    transition: transform 0.3s ease; /* Efecto de transición al pasar el mouse */
-}
-
-/* Efecto de hover sobre las imágenes */
-.mas-razones .razon-item:hover img {
-    transform: scale(1.05); /* Aumentar un poco la imagen cuando se pase el ratón por encima */
-}
-
-/* Títulos debajo de las imágenes */
-.mas-razones .razon-item p {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Pronóstico de amor */
-.pronostico-amor {
-    padding: 20px;
-    background-color: #FFF0F5;
-    margin-top: 30px;
-}
-
-.pronostico-amor h3 {
-    font-size: 2em;
-    text-align: center;
-}
-
-.pronostico-amor .pronostico {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.pronostico-amor .advertencia {
-    font-size: 1.2em;
-    text-align: center;
-    color: #FF3366;
-}
-
-.pronostico-amor .icono-clima {
-    font-size: 4em;
-    text-align: center;
-    margin-top: 10px;
-}
-
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Ajustes generales */
-    body {
-        font-size: 14px;
-    }
-
     /* Estilo para el encabezado */
     header {
         padding: 20px;
@@ -207,98 +17,124 @@ header {
     }
 
     header h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Reducir tamaño del título */
     }
 
     .noticia-principal h2 {
-        font-size: 2em;
+        font-size: 2em; /* Ajustar tamaño del subtítulo */
     }
 
     .noticia-principal img {
-        width: 80%;
+        width: 80%; /* Hacer la imagen más pequeña */
         max-width: 180px;
     }
 
-    /* Ajuste de los vales */
+    /* Ajustar los vales */
     .vales .fila {
-        flex-direction: column;
+        flex-direction: column; /* Mostrar los vales en una columna */
     }
 
     .vales .vale {
-        width: 100%;
+        width: 100%; /* Ancho completo en dispositivos móviles */
         margin-bottom: 15px;
     }
 
-    /* Ajustes de las razones */
+    /* Ajustar las razones */
     .razones {
-        padding: 15px;
+        padding: 15px; /* Reducir el padding */
     }
 
     .razones h3 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Reducir tamaño de encabezado */
     }
 
     .razones ul li {
-        font-size: 1.1em;
+        font-size: 1.1em; /* Reducir tamaño de fuente de lista */
     }
 
     /* Ajuste en la sección de Investigación Especial */
     .investigacion {
         padding: 15px;
+        max-width: 100%; /* Asegurarse de que ocupe todo el ancho */
     }
 
     .investigacion h3 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Reducir tamaño del título */
     }
 
     /* Ajuste en la sección de Más Razones */
+    .mas-razones {
+        padding: 15px;
+    }
+
+    /* Slider para las películas */
     .mas-razones .slider-container {
-        display: block;
+        display: block; /* Cambio a bloque para evitar el scroll horizontal */
         overflow-x: visible;
     }
 
     .mas-razones .razon-item {
-        width: 100%;
-        margin-bottom: 15px;
+        width: 100%; /* Hacer que los elementos ocupen todo el ancho */
+        height: auto;
     }
 
     .mas-razones .razon-item img {
-        max-width: 100%;
+        width: 100%; /* Ajustar la imagen al contenedor */
+        height: auto;
     }
 
     /* Ajustes en el pronóstico */
     .pronostico-amor {
         padding: 20px;
-        max-width: 90%;
+        max-width: 90%; /* Reducir el ancho máximo */
     }
 
     .pronostico-amor h3 {
-        font-size: 2em;
+        font-size: 2em; /* Ajustar el tamaño del título */
     }
 
     .pronostico-amor p {
-        font-size: 1.3em;
+        font-size: 1.3em; /* Ajustar el tamaño del texto */
     }
 
     .pronostico-amor .pronostico {
-        font-size: 1.6em;
+        font-size: 1.6em; /* Ajustar el tamaño del pronóstico */
     }
 }
 
-/* Media query para pantallas muy pequeñas (teléfonos pequeños) */
+/* Media query para pantallas extra pequeñas (teléfonos muy pequeños) */
 @media (max-width: 480px) {
-    .mas-razones h3 {
-        font-size: 1.8em;
+    /* Ajustes de fuentes */
+    body {
+        font-size: 14px; /* Reducir el tamaño de la fuente en pantallas muy pequeñas */
     }
 
-    .mas-razones .razon-item {
-        width: 100%;
-        margin-bottom: 10px;
+    .tarjeta h3, .vales .vale h3, .razones h3, .investigacion h3 {
+        font-size: 1.5em; /* Reducir el tamaño de los títulos */
     }
 
-    .mas-razones .razon-item img {
-        max-width: 100%;
+    /* Ajuste en los vales para móviles pequeños */
+    .vales .vale h3 {
+        font-size: 1.3em; /* Reducir el tamaño de los títulos de los vales */
     }
+
+    .mas-razones .razon-item p {
+        font-size: 1em; /* Reducir el tamaño de los textos debajo de las imágenes */
+    }
+
+    /* Ajuste en el pronóstico */
+    .pronostico-amor p {
+        font-size: 1.1em; /* Reducir el tamaño del texto */
+    }
+
+    .pronostico-amor .pronostico {
+        font-size: 1.4em; /* Reducir tamaño del pronóstico */
+    }
+
+    .pronostico-amor .advertencia {
+        font-size: 1.2em; /* Ajustar tamaño de advertencia */
+    }
+}
 
     .mas-razones .razon-item p {
         font-size: 1em;
