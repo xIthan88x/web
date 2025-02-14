@@ -1,358 +1,138 @@
-/* Estilos generales para index */
+/* Estilo base para dispositivos pequeños */
 body {
-    background-color: #FF6F61; /* Fondo rojo bonito */
+    background-color: #FF6F61;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     color: white;
+    font-size: 16px; /* Ajuste de tamaño de fuente base */
 }
 
-.container {
-    text-align: center;
-    margin-top: 20%;
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Estilo para el encabezado */
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Reducir tamaño del título */
+    }
+
+    .noticia-principal h2 {
+        font-size: 2em; /* Ajustar tamaño del subtítulo */
+    }
+
+    .noticia-principal img {
+        width: 80%; /* Hacer la imagen más pequeña */
+        max-width: 180px;
+    }
+
+    /* Ajustar los vales */
+    .vales .fila {
+        flex-direction: column; /* Mostrar los vales en una columna */
+    }
+
+    .vales .vale {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        margin-bottom: 15px;
+    }
+
+    /* Ajustar las razones */
+    .razones {
+        padding: 15px; /* Reducir el padding */
+    }
+
+    .razones h3 {
+        font-size: 1.8em; /* Reducir tamaño de encabezado */
+    }
+
+    .razones ul li {
+        font-size: 1.1em; /* Reducir tamaño de fuente de lista */
+    }
+
+    /* Ajuste en la sección de Investigación Especial */
+    .investigacion {
+        padding: 15px;
+        max-width: 100%; /* Asegurarse de que ocupe todo el ancho */
+    }
+
+    .investigacion h3 {
+        font-size: 1.8em; /* Reducir tamaño del título */
+    }
+
+    /* Ajuste en la sección de Más Razones */
+    .mas-razones {
+        padding: 15px;
+    }
+
+    /* Slider para las películas */
+    .mas-razones .slider-container {
+        display: block; /* Cambio a bloque para evitar el scroll horizontal */
+        overflow-x: visible;
+    }
+
+    .mas-razones .razon-item {
+        width: 100%; /* Hacer que los elementos ocupen todo el ancho */
+        height: auto;
+    }
+
+    .mas-razones .razon-item img {
+        width: 100%; /* Ajustar la imagen al contenedor */
+        height: auto;
+    }
+
+    /* Ajustes en el pronóstico */
+    .pronostico-amor {
+        padding: 20px;
+        max-width: 90%; /* Reducir el ancho máximo */
+    }
+
+    .pronostico-amor h3 {
+        font-size: 2em; /* Ajustar el tamaño del título */
+    }
+
+    .pronostico-amor p {
+        font-size: 1.3em; /* Ajustar el tamaño del texto */
+    }
+
+    .pronostico-amor .pronostico {
+        font-size: 1.6em; /* Ajustar el tamaño del pronóstico */
+    }
 }
 
-.titulo {
-    font-size: 3em;
-    color: white;
-    margin-bottom: 40px;
+/* Media query para pantallas extra pequeñas (teléfonos muy pequeños) */
+@media (max-width: 480px) {
+    /* Ajustes de fuentes */
+    body {
+        font-size: 14px; /* Reducir el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    .tarjeta h3, .vales .vale h3, .razones h3, .investigacion h3 {
+        font-size: 1.5em; /* Reducir el tamaño de los títulos */
+    }
+
+    /* Ajuste en los vales para móviles pequeños */
+    .vales .vale h3 {
+        font-size: 1.3em; /* Reducir el tamaño de los títulos de los vales */
+    }
+
+    .mas-razones .razon-item p {
+        font-size: 1em; /* Reducir el tamaño de los textos debajo de las imágenes */
+    }
+
+    /* Ajuste en el pronóstico */
+    .pronostico-amor p {
+        font-size: 1.1em; /* Reducir el tamaño del texto */
+    }
+
+    .pronostico-amor .pronostico {
+        font-size: 1.4em; /* Reducir tamaño del pronóstico */
+    }
+
+    .pronostico-amor .advertencia {
+        font-size: 1.2em; /* Ajustar tamaño de advertencia */
+    }
 }
 
-/* Estilos de los botones */
-.botones {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-button {
-    font-size: 1.2em;
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-no {
-    background-color: red;
-    color: white;
-}
-
-.btn-no:hover {
-    background-color: #cc0000;
-}
-
-.btn-si {
-    background-color: green;
-    color: white;
-}
-
-.btn-si:hover {
-    background-color: #008000;
-}
-
-
-/* Estilos para la página de noticias */
-body.news-page {
-    background-image: url('fondo_rosa_corazones.jpg');
-    background-size: cover;
-}
-header {
-    background-color: rgba(255, 182, 193, 0.8);
-    text-align: center;
-    padding: 30px;
-    border-bottom: 2px solid #ff69b4;
-}
-header h1 {
-    font-size: 3em;
-    margin: 0;
-    color: #ff69b4;
-    font-family: 'Georgia', serif;
-}
-header h2 {
-    font-size: 2em;
-    margin: 10px 0;
-    color: #fff;
-    background-color: #ff69b4;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-.contenido {
-    padding: 20px;
-}
-.noticia-principal {
-    text-align: center;
-    margin: 20px;
-}
-.noticia-principal h2 {
-    font-size: 2.5em;
-    color: #d6336c;
-    font-family: 'Georgia', serif;
-}
-.noticia-principal img {
-    border-radius: 50%;
-    margin: 10px 0;
-}
-.noticia-principal p {
-    font-size: 1.2em;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 10px;
-    display: inline-block;
-}
-.tarjeta {
-    background-color: #ffcccb;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.tarjeta h3 {
-    font-size: 2em;
-    margin: 0;
-    color: #fff;
-    background-color: #d6336c;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-.vales {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.vales .fila {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.vales .vale {
-    border: 2px dashed #d6336c;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #ffe6e6;
-    width: 48%;
-    box-sizing: border-box;
-}
-.vales .vale .titulo-pequeno {
-    font-family: 'Cursive', Arial, sans-serif;
-    font-size: 0.8em;
-}
-.vales .vale h3 {
-    margin: 5px 0;
-    color: #d6336c;
-    font-size: 1.5em;
-}
-h3 {
-    color: #d6336c;
-    font-family: 'Georgia', serif;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #333;
-}
-/* Agregar un estilo para la sección de razones */
-.razones {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.razones h3 {
-    font-size: 2em;
-    color: #d6336c;
-    margin-bottom: 20px;
-}
-
-.razones ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.razones ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #333;
-    background-color: #ffe6e6;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #d6336c;
-}
-/* Estilo para la sección de Investigación Especial */
-.investigacion {
-    background-color: #fce4ec; /* Fondo suave rosado */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.investigacion h3 {
-    font-size: 2em;
-    color: #d6336c;
-    margin-bottom: 15px;
-    font-family: 'Georgia', serif;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-.investigacion ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.investigacion ul li {
-    font-size: 1.1em;
-    margin: 10px 0;
-    color: #333;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #d6336c;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.investigacion ul li:hover {
-    transform: translateY(-5px); /* Efecto sutil de desplazamiento */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efecto de sombra al pasar el ratón */
-}
-
-.investigacion ul li:nth-child(odd) {
-    background-color: #ffe6e6; /* Fondo suave rosado para las filas impares */
-}
-
-.investigacion ul li:nth-child(even) {
-    background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
-}
-/* Estilo para la sección de Más Razones */
-.mas-razones {
-    background-color: #f8bbd0;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Título de la sección */
-.mas-razones h3 {
-    font-size: 2em;
-    color: #d6336c;
-    margin-bottom: 20px;
-    font-family: 'Georgia', serif;
-    letter-spacing: 1px;
-}
-
-/* Contenedor deslizable */
-.mas-razones .slider-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    scroll-behavior: smooth; /* Desplazamiento suave */
-}
-
-.mas-razones .razon-item {
-    background-color: #fff;
-    border-radius: 8px;
-    width: 250px;
-    height: 150px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
-.mas-razones .razon-item img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.mas-razones .razon-item:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.mas-razones .razon-item.selected {
-    transform: scale(1.5); /* Aumenta el tamaño cuando está seleccionado */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Detalles debajo de cada imagen */
-.mas-razones .razon-item p {
-    font-size: 1.1em;
-    color: #d6336c;
-    margin-top: 10px;
-    font-weight: bold;
-}
-/* Estilos del Pronóstico del Amor */
-.pronostico-amor {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido blanco */
-    padding: 30px;
-    border-radius: 15px;
-    margin: 30px auto;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.pronostico-amor h3 {
-    font-size: 2.5em;
-    color: #FF6F61; /* Color rojo romántico */
-    margin-bottom: 20px;
-    font-family: 'Georgia', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.pronostico-amor p {
-    font-size: 1.5em;
-    color: #333;
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-.pronostico-amor .pronostico {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #e63946; /* Rojo cálido para el pronóstico */
-    margin-top: 20px;
-    font-family: 'Cursive', sans-serif;
-}
-
-.pronostico-amor .advertencia {
-    font-size: 1.3em;
-    color: #6a1b9a; /* Color morado para advertencia */
-    margin-top: 15px;
-    font-style: italic;
-}
-
-.pronostico-amor .icono-clima {
-    font-size: 3em;
-    color: #FF6F61;
-    margin: 20px 0;
-}
