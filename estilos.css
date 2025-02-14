@@ -50,7 +50,139 @@ button {
 .btn-si:hover {
     background-color: #008000;
 }
+/* Estilos para la página de noticias */
 
+body.news-page {
+
+background-image: url('fondo_rosa_corazones.jpg');
+
+background-size: cover;
+
+}
+
+header {
+
+background-color: rgba(255, 182, 193, 0.8);
+
+text-align: center;
+
+padding: 30px;
+
+border-bottom: 2px solid #ff69b4;
+
+}
+
+header h1 {
+
+font-size: 3em;
+
+margin: 0;
+
+color: #ff69b4;
+
+font-family: 'Georgia', serif;
+
+}
+
+header h2 {
+
+font-size: 2em;
+
+margin: 10px 0;
+
+color: #fff;
+
+background-color: #ff69b4;
+
+display: inline-block;
+
+padding: 10px 20px;
+
+border-radius: 10px;
+
+}
+
+.contenido {
+
+padding: 20px;
+
+}
+
+.noticia-principal {
+
+text-align: center;
+
+margin: 20px;
+
+}
+
+.noticia-principal h2 {
+
+font-size: 2.5em;
+
+color: #d6336c;
+
+font-family: 'Georgia', serif;
+
+}
+
+.noticia-principal img {
+
+border-radius: 50%;
+
+margin: 10px 0;
+
+}
+
+.noticia-principal p {
+
+font-size: 1.2em;
+
+color: #333;
+
+background-color: rgba(255, 255, 255, 0.8);
+
+padding: 15px;
+
+border-radius: 10px;
+
+display: inline-block;
+
+}
+
+.tarjeta {
+
+background-color: #975353 ;
+
+padding: 20px;
+
+border-radius: 10px;
+
+margin: 20px 0;
+
+text-align: center;
+
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.tarjeta h3 {
+
+font-size: 2em;
+
+margin: 0;
+
+color: #fff;
+
+background-color: #d6336c;
+
+display: inline-block;
+
+padding: 10px 20px;
+
+border-radius: 10px;
+
+}
 /* Sección de vales */
 .vales {
     background-color: rgba(255, 255, 255, 0.8);
