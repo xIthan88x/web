@@ -1,5 +1,5 @@
 body {
-    background-color: #FF6F61;
+    background-color: #FF6F61; /* Fondo rojo bonito */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -8,26 +8,25 @@ body {
 
 .container {
     text-align: center;
-    margin-top: 10%;
-    padding: 20px;
+    margin-top: 20%;
 }
 
 .titulo {
-    font-size: 2.5em;
+    font-size: 3em;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
+/* Estilos de los botones */
 .botones {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 button {
     font-size: 1.2em;
-    padding: 12px 25px;
+    padding: 15px 30px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -52,70 +51,307 @@ button {
     background-color: #008000;
 }
 
-/* Adaptación a dispositivos móviles */
-@media (max-width: 768px) {
-    .container {
-        margin-top: 5%;
-        padding: 10px;
-    }
 
-    .titulo {
-        font-size: 2em;
-    }
+/* Estilos para la página de noticias */
+body.news-page {
+    background-image: url('fondo_rosa_corazones.jpg');
+    background-size: cover;
+}
+header {
+    background-color: rgba(255, 182, 193, 0.8);
+    text-align: center;
+    padding: 30px;
+    border-bottom: 2px solid #ff69b4;
+}
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #ff69b4;
+    font-family: 'Georgia', serif;
+}
+header h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #ff69b4;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.contenido {
+    padding: 20px;
+}
+.noticia-principal {
+    text-align: center;
+    margin: 20px;
+}
+.noticia-principal h2 {
+    font-size: 2.5em;
+    color: #d6336c;
+    font-family: 'Georgia', serif;
+}
+.noticia-principal img {
+    border-radius: 50%;
+    margin: 10px 0;
+}
+.noticia-principal p {
+    font-size: 1.2em;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.tarjeta {
+    background-color: #ffcccb;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.tarjeta h3 {
+    font-size: 2em;
+    margin: 0;
+    color: #fff;
+    background-color: #d6336c;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.vales {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.vales .fila {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.vales .vale {
+    border: 2px dashed #d6336c;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffe6e6;
+    width: 48%;
+    box-sizing: border-box;
+}
+.vales .vale .titulo-pequeno {
+    font-family: 'Cursive', Arial, sans-serif;
+    font-size: 0.8em;
+}
+.vales .vale h3 {
+    margin: 5px 0;
+    color: #d6336c;
+    font-size: 1.5em;
+}
+h3 {
+    color: #d6336c;
+    font-family: 'Georgia', serif;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+/* Agregar un estilo para la sección de razones */
+.razones {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
 
-    .botones {
-        flex-direction: column;
-        gap: 10px;
-    }
+.razones h3 {
+    font-size: 2em;
+    color: #d6336c;
+    margin-bottom: 20px;
+}
 
-    button {
-        width: 100%;
-        padding: 10px;
-        font-size: 1em;
-    }
+.razones ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    header h1 {
-        font-size: 2.5em;
-    }
+.razones ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d6336c;
+}
+/* Estilo para la sección de Investigación Especial */
+.investigacion {
+    background-color: #fce4ec; /* Fondo suave rosado */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    header h2 {
-        font-size: 1.5em;
-        padding: 8px 15px;
-    }
+.investigacion h3 {
+    font-size: 2em;
+    color: #d6336c;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
 
-    .noticia-principal h2 {
-        font-size: 2em;
-    }
+.investigacion ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    .noticia-principal p {
-        font-size: 1em;
-        padding: 10px;
-    }
+.investigacion ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #333;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #d6336c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .vales .fila {
-        flex-direction: column;
-        align-items: center;
-    }
+.investigacion ul li:hover {
+    transform: translateY(-5px); /* Efecto sutil de desplazamiento */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efecto de sombra al pasar el ratón */
+}
 
-    .vales .vale {
-        width: 100%;
-    }
+.investigacion ul li:nth-child(odd) {
+    background-color: #ffe6e6; /* Fondo suave rosado para las filas impares */
+}
 
-    .mas-razones .slider-container {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
+.investigacion ul li:nth-child(even) {
+    background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
+}
+/* Estilo para la sección de Más Razones */
+.mas-razones {
+    background-color: #f8bbd0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-    .pronostico-amor {
-        padding: 20px;
-        max-width: 90%;
-    }
+/* Título de la sección */
+.mas-razones h3 {
+    font-size: 2em;
+    color: #d6336c;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
 
-    .pronostico-amor h3 {
-        font-size: 2em;
-    }
+/* Contenedor deslizable */
+.mas-razones .slider-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
 
-    .pronostico-amor p {
-        font-size: 1.2em;
-    }
+.mas-razones .razon-item {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 250px;
+    height: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.mas-razones .razon-item img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.mas-razones .razon-item:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mas-razones .razon-item.selected {
+    transform: scale(1.5); /* Aumenta el tamaño cuando está seleccionado */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Detalles debajo de cada imagen */
+.mas-razones .razon-item p {
+    font-size: 1.1em;
+    color: #d6336c;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Estilos del Pronóstico del Amor */
+.pronostico-amor {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido blanco */
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pronostico-amor h3 {
+    font-size: 2.5em;
+    color: #FF6F61; /* Color rojo romántico */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pronostico-amor p {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.pronostico-amor .pronostico {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e63946; /* Rojo cálido para el pronóstico */
+    margin-top: 20px;
+    font-family: 'Cursive', sans-serif;
+}
+
+.pronostico-amor .advertencia {
+    font-size: 1.3em;
+    color: #6a1b9a; /* Color morado para advertencia */
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.pronostico-amor .icono-clima {
+    font-size: 3em;
+    color: #FF6F61;
+    margin: 20px 0;
 }
