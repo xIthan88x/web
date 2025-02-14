@@ -1,5 +1,5 @@
 body {
-    background-color: #C70039; /* Fondo rojo bonito */
+    background-color: #B22222; /* Rojo oscuro elegante */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -34,138 +34,126 @@ button {
 }
 
 .btn-no {
-    background-color: red;
+    background-color: #8B0000; /* Rojo intenso */
     color: white;
 }
 
 .btn-no:hover {
-    background-color: #cc0000;
+    background-color: #a52a2a; /* Rojo tierra */
 }
 
 .btn-si {
-    background-color: green;
+    background-color: #228B22; /* Verde bosque */
     color: white;
 }
 
 .btn-si:hover {
-    background-color: #008000;
+    background-color: #006400; /* Verde oscuro */
 }
-
 
 /* Estilos para la página de noticias */
 body.news-page {
-    background-image: url('fondo_rosa_corazones.jpg');
+    background-image: url('fondo_rojo_textura.jpg');
     background-size: cover;
 }
+
 header {
-    background-color: rgba(255, 182, 193, 0.8);
+    background-color: rgba(139, 0, 0, 0.8);
     text-align: center;
     padding: 30px;
-    border-bottom: 2px solid #ff69b4;
+    border-bottom: 2px solid #8B0000;
 }
+
 header h1 {
     font-size: 3em;
     margin: 0;
-    color: #ff69b4;
+    color: white;
     font-family: 'Georgia', serif;
 }
+
 header h2 {
     font-size: 2em;
     margin: 10px 0;
-    color: #fff;
-    background-color: #ff69b4;
+    color: white;
+    background-color: #8B0000;
     display: inline-block;
     padding: 10px 20px;
     border-radius: 10px;
 }
+
 .contenido {
     padding: 20px;
 }
+
 .noticia-principal {
     text-align: center;
     margin: 20px;
 }
+
 .noticia-principal h2 {
     font-size: 2.5em;
-    color: #d6336c;
+    color: #A52A2A;
     font-family: 'Georgia', serif;
 }
-.noticia-principal img {
-    border-radius: 50%;
-    margin: 10px 0;
-}
+
 .noticia-principal p {
     font-size: 1.2em;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    background-color: rgba(50, 50, 50, 0.8);
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
 }
+
+/* Tarjetas */
 .tarjeta {
-    background-color: #ffcccb;
+    background-color: #800000;
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .tarjeta h3 {
     font-size: 2em;
     margin: 0;
-    color: #fff;
-    background-color: #d6336c;
+    color: white;
+    background-color: #B22222;
     display: inline-block;
     padding: 10px 20px;
     border-radius: 10px;
 }
+
+/* Sección de vales */
 .vales {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(50, 50, 50, 0.8);
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.vales .fila {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+
 .vales .vale {
-    border: 2px dashed #d6336c;
+    border: 2px dashed #B22222;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
-    background-color: #ffe6e6;
+    background-color: #4B0000;
     width: 48%;
     box-sizing: border-box;
 }
-.vales .vale .titulo-pequeno {
-    font-family: 'Cursive', Arial, sans-serif;
-    font-size: 0.8em;
-}
+
 .vales .vale h3 {
     margin: 5px 0;
-    color: #d6336c;
+    color: white;
     font-size: 1.5em;
 }
-h3 {
-    color: #d6336c;
-    font-family: 'Georgia', serif;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #333;
-}
-/* Agregar un estilo para la sección de razones */
+
+/* Sección de razones */
 .razones {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(50, 50, 50, 0.8);
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
@@ -175,27 +163,23 @@ ul li {
 
 .razones h3 {
     font-size: 2em;
-    color: #d6336c;
+    color: white;
     margin-bottom: 20px;
-}
-
-.razones ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 .razones ul li {
     font-size: 1.2em;
     margin: 10px 0;
-    color: #333;
-    background-color: #ffe6e6;
+    color: white;
+    background-color: #660000;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #d6336c;
+    border: 1px solid #A52A2A;
 }
-/* Estilo para la sección de Investigación Especial */
+
+/* Sección de investigación */
 .investigacion {
-    background-color: #fce4ec; /* Fondo suave rosado */
+    background-color: #4B0000;
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
@@ -208,110 +192,32 @@ ul li {
 
 .investigacion h3 {
     font-size: 2em;
-    color: #d6336c;
+    color: white;
     margin-bottom: 15px;
     font-family: 'Georgia', serif;
     letter-spacing: 1px;
     font-weight: bold;
 }
 
-.investigacion ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 .investigacion ul li {
     font-size: 1.1em;
     margin: 10px 0;
-    color: #333;
-    background-color: #fff;
+    color: white;
+    background-color: #660000;
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid #d6336c;
+    border: 1px solid #A52A2A;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .investigacion ul li:hover {
-    transform: translateY(-5px); /* Efecto sutil de desplazamiento */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efecto de sombra al pasar el ratón */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.investigacion ul li:nth-child(odd) {
-    background-color: #ffe6e6; /* Fondo suave rosado para las filas impares */
-}
-
-.investigacion ul li:nth-child(even) {
-    background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
-}
-/* Estilo para la sección de Más Razones */
-.mas-razones {
-    background-color: #f8bbd0;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Título de la sección */
-.mas-razones h3 {
-    font-size: 2em;
-    color: #d6336c;
-    margin-bottom: 20px;
-    font-family: 'Georgia', serif;
-    letter-spacing: 1px;
-}
-
-/* Contenedor deslizable */
-.mas-razones .slider-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    scroll-behavior: smooth; /* Desplazamiento suave */
-}
-
-.mas-razones .razon-item {
-    background-color: #fff;
-    border-radius: 8px;
-    width: 250px;
-    height: 150px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
-.mas-razones .razon-item img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.mas-razones .razon-item:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.mas-razones .razon-item.selected {
-    transform: scale(1.5); /* Aumenta el tamaño cuando está seleccionado */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Detalles debajo de cada imagen */
-.mas-razones .razon-item p {
-    font-size: 1.1em;
-    color: #d6336c;
-    margin-top: 10px;
-    font-weight: bold;
-}
-/* Estilos del Pronóstico del Amor */
+/* Pronóstico del Amor */
 .pronostico-amor {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido blanco */
+    background-color: rgba(50, 50, 50, 0.8);
     padding: 30px;
     border-radius: 15px;
     margin: 30px auto;
@@ -322,15 +228,14 @@ ul li {
 
 .pronostico-amor h3 {
     font-size: 2.5em;
-    color: #FF6F61; /* Color rojo romántico */
+    color: white;
     margin-bottom: 20px;
     font-family: 'Georgia', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pronostico-amor p {
     font-size: 1.5em;
-    color: #333;
+    color: white;
     margin: 10px 0;
     line-height: 1.6;
 }
@@ -338,20 +243,20 @@ ul li {
 .pronostico-amor .pronostico {
     font-size: 1.8em;
     font-weight: bold;
-    color: #e63946; /* Rojo cálido para el pronóstico */
+    color: #E63946;
     margin-top: 20px;
     font-family: 'Cursive', sans-serif;
 }
 
 .pronostico-amor .advertencia {
     font-size: 1.3em;
-    color: #6a1b9a; /* Color morado para advertencia */
+    color: #FFD700; /* Amarillo dorado para advertencia */
     margin-top: 15px;
     font-style: italic;
 }
 
 .pronostico-amor .icono-clima {
     font-size: 3em;
-    color: #FF6F61;
+    color: #E63946;
     margin: 20px 0;
 }
