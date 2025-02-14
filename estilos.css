@@ -579,14 +579,15 @@ background-color: #f8bbd0; /* Fondo suave lavanda para las filas pares */
 }
 /* Pronóstico del Amor */
 .pronostico-amor {
-    background-color: rgba(50, 50, 50, 0.8);
+    background-color: rgba(50, 50, 50, 0.8) !important;
     padding: 30px;
     border-radius: 15px;
     margin: 30px auto;
     max-width: 600px;
     text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: block; /* Asegura que no se vea como texto suelto */
+    }
 
 .pronostico-amor h3 {
     font-size: 2.5em;
