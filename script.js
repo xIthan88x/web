@@ -26,10 +26,10 @@ function selectItem(item) {
     let selectedImage = item.querySelector('img');
 
     // Cambia el tamaño de la imagen
-    selectedImage.style.width = '200px'; // Aumenta el tamaño al seleccionar
+    selectedImage.style.width = '100px'; // Aumenta el tamaño al seleccionar
     selectedItem.style.fontSize = '1.4em'; // Aumenta el tamaño del texto
 
     // Cambia el estilo para darle un toque especial
-    selectedItem.style.color = '#BC7959';
+    selectedItem.style.color = '#990033';
     selectedItem.style.fontWeight = 'bold';
 }
